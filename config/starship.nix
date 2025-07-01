@@ -13,7 +13,7 @@
             ];
             scan_timeout = 10;
             character = {
-                sucess_symbol = "->";
+                success_symbol = "->";
                 error_symbol = "->";
             };
         };
