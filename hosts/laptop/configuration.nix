@@ -101,6 +101,12 @@
   # Enables Hyprland
   programs.hyprland.enable = true;
 
+  # Enables Sway
+  programs.sway = {
+      enable = true;
+      wrapperFeatures.gtk = true;
+  };
+
 # starts Hyprland
   programs.uwsm.enable = true;
   programs.uwsm.waylandCompositors = {
