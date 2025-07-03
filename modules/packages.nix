@@ -9,6 +9,7 @@
         docker-compose
         fastfetch
         firefox
+        freecad-wayland
         fzf
         gcc
         gh
