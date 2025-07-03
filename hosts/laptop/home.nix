@@ -10,7 +10,7 @@
 	# Import program configs
 	## to be stored in ~/BeeOS/config/
 	imports = [
-        ../../modules/hyprland_module.nix
+        ../../modules/hyprland/hyprland_module.nix
         ../../config/wlogout.nix
         # ../../config/starship.nix
         # ../../config/hyprpanel.nix
