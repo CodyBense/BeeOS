@@ -19,6 +19,7 @@
         lazygit
         libnotify
         neovim
+        nh
         networkmanagerapplet
         pavucontrol
         pyenv
