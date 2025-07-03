@@ -99,7 +99,7 @@
   };
 
   # Enables Hyprland
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
 
   # Enables Sway
   programs.sway = {
@@ -116,7 +116,6 @@
           binPath = "/run/current-system/sw/bin/Hyprland";
       };
   };
-  programs.hyprland.withUWSM = true;
 
   # Flatpak
   services.flatpak.enable = true;

@@ -1,4 +1,4 @@
-{ lib, username, host, config, ... }:
+{ lib, username, host, config, pkgs, ... }:
 
 {
     options = {
@@ -7,6 +7,9 @@
 
     config = lib.mkIf config.hyprland_module.enable {
         wayland.windowManager.hyprland = {
+            package = [
+                pkgs.hyprland
+            ];
             enable = true;
             xwayland.enable = true;
             systemd.enable = false;
