@@ -1,5 +1,5 @@
 # dotfiles config control through home-manager
-{ pkgs, username, inputs, ... }:
+{ pkgs, username, lib, inputs, ... }:
 
 {
 	# home-manager settings
@@ -10,13 +10,14 @@
 	# Import program configs
 	## to be stored in ~/BeeOS/config/
 	imports = [
-        ../../config/hyprland.nix
+        ../../modules/hyprland_module.nix
         ../../config/wlogout.nix
         # ../../config/starship.nix
         # ../../config/hyprpanel.nix
 
         ../../modules/home_bundle.nix
 	];
+    hyprland_module.enable = lib.mkDefault true;
 
 	# place files in home dir
 	## home.file."</desired/path>" = { source = </path/>; recursive; };
