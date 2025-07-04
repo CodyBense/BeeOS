@@ -139,13 +139,13 @@
                     "$mainMod, E, exec, $fileManager"
                     "$mainMod, V, togglefloating,"
                     "$mainMod SHIFT, V, fullscreen "
-                    "$mainMod, SPACE, exec, $scrPath/rofi-launch"
+                    "$mainMod, SPACE, exec, rofi-launch"
                     "$mainMod, P, pseudo,"
                     "$mainMod, F, exec,  flatpak run app.zen_browser.zen"
                     "$mainMod, M, exec, spotify"
                     "$mainMod, O, exec, obsidian"
                     "$mainMod, BACKSPACE, exec, wlogout"
-                    "$mainMod, PERIOD, exec, $scrPath/emojipicker"
+                    "$mainMod, PERIOD, exec, emojipicker"
                     "$mainMod ALT, L, exec, hyprlock "
                     "$mainMod, H, movefocus, l"
                     "$mainMod, L, movefocus, r"
@@ -199,9 +199,9 @@
                     ", XF86AudioMute, exec, wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
                     ", XF86MonBrightnessDown, exec, brightnessctl set 5%-"
                     ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
-                    "$mainMod SHIFT, W, exec, bash $scrPath/rofi-wallpaper"
+                    "$mainMod SHIFT, W, exec, bash rofi-wallpaper"
                     ", PrintScreen, exec, /home/codybense/.config/ags/services/snapshot"
-                    "$mainMod SHIFT, m, exec, $scrPath/hyprland-monitor-toggle"
+                    "$mainMod SHIFT, m, exec, hyprland-monitor-toggle"
                     ];
 
             bindm = [
