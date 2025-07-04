@@ -17,7 +17,6 @@
 
         ../../modules/home_bundle.nix
 	];
-    hyprland_module.enable = lib.mkDefault true;
 
 	# place files in home dir
 	## home.file."</desired/path>" = { source = </path/>; recursive; };

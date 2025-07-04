@@ -99,10 +99,10 @@
   };
 
   # Enables Hyprland
-  # programs.hyprland = {
-  #     enable = true;
-  #     withUWSM = true;
-  # };
+  programs.hyprland = {
+      enable = true;
+      withUWSM = true;
+  };
 
   # Enables Sway
   programs.sway = {
