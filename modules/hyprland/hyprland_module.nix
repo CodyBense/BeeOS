@@ -201,7 +201,7 @@
                     ", XF86MonBrightnessUp, exec, brightnessctl set +5%"
                     "$mainMod SHIFT, W, exec, bash $scrPath/rofi-wallpaper"
                     ", PrintScreen, exec, /home/codybense/.config/ags/services/snapshot"
-                    "$mainMod SHIFT, home, exec, $scrPath/hyprland-monitor-toggle"
+                    "$mainMod SHIFT, m, exec, $scrPath/hyprland-monitor-toggle"
                     ];
 
             bindm = [
