@@ -8,7 +8,7 @@
         settings = {
             monitor = ",preferred,auto,auto";
             exec-once = [
-                "hyprland-monitor-toggle"
+                    "hyprland-monitor-toggle"
                     "dbus-update-activation-environment --systemd -all"
                     "lxqt-policykit-agent"
                     "hyprpanel"
@@ -131,7 +131,7 @@
             "$menu" = "rofi --show drun";
 
             bind = [
-                "$mainMod, T, exec, $terminal"
+                    "$mainMod, T, exec, $terminal"
                     "$mainMod, Q, killactive,"
                     "$mainMod, DELETE, exit,"
                     "$mainMod, E, exec, $fileManager"
