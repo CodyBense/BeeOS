@@ -13,6 +13,7 @@
                 v = "nvim";
                 vi = "nvim";
                 iv = ''nvim $(fzf --preview="bat --color=always {}")'';
+                ib = ''bat $(fzf --preview="bat --color=always {}")'';
                 sv = "sudo nvim";
                 ll = "ls -l";
                 la = "ls -a";
