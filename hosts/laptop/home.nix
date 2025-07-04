@@ -12,6 +12,7 @@
 	imports = [
         ../../modules/hyprland/hyprland_module.nix
         ../../config/wlogout.nix
+        ../../config/bash.nix
         # ../../config/starship.nix
         # ../../config/hyprpanel.nix
 
