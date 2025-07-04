@@ -10,7 +10,7 @@
         shellAliases = {
             c = "clear";
             v = "nvim";
-            vi = "nvim"
+            vi = "nvim";
             iv = ''nvim $(fzf --preview="bat --color=always {}")'';
             sv = "sudo nvim";
             ll = "ls -l";
