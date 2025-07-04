@@ -34,6 +34,10 @@
                 export PATH="$PATH:/home/codybense/.local/bin"
                 export PYENV_ROOT="$HOME/.pyenv"
                 [[ -d $PYENV_ROOT/bin ]] && export PATH="$PYENV_ROOT/bin:$PATH"
+                eval "$(fzf --bash)"
+                eval "$(starship init bash)"
+                eval "$(direnv hook bash)"
+                eval "$(zoxide init bash)"
                 '';
         };
         pyenv.enableBashIntegration = true;
