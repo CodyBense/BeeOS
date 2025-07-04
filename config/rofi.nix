@@ -132,7 +132,7 @@
                 };
 
                 "button selected" = {
-                }
+                };
 
                 "scrollbar" = {
                     width = mkLiteral "4px";
