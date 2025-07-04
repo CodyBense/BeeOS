@@ -28,6 +28,9 @@
 
   # Enable bluetooth
   hardware.bluetooth.enable = true;
+  
+  # Enable qmk
+  hardware.keyboard.qmk.enable = true;
 
   # Set your time zone.
   time.timeZone = "America/New_York";
