@@ -37,6 +37,7 @@
         waybar
         wlogout
         yazi
+        zellij
         zoxide
         # inputs.zen-browser.packages."${system}".default
 
