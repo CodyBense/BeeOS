@@ -4,6 +4,8 @@
     environment.systemPackages = with pkgs; [
         arduino-cli
         bat
+        brightnessctl
+        btop
         cmake
         direnv
         dmenu
@@ -15,53 +17,38 @@
         gcc
         gh
         ghostty
-        hypridle
+        grimblast
         hyprcursor
+        hypridle
+        hyprpicker
+        hyprsunset
         rose-pine-hyprcursor
         lazygit
         libnotify
+        matugen
         neovim
-        nh
+        networkmanager
         networkmanagerapplet
+        nh
         pavucontrol
         pyenv
         ripgrep
         rofi-wayland
         spotify
+        starship
         swayimg
         swaynotificationcenter
-        starship
+        swww
         tlp
         tmux
         tree
         unzip
         waybar
+        wf-recorder
+        wl-clipboard
         wlogout
         yazi
         zellij
         zoxide
-        # inputs.zen-browser.packages."${system}".default
-
-        # Hyprpanel
-        wireplumber
-        libgtop
-        bluez
-        bluez-tools
-        networkmanager
-        dart-sass
-        wl-clipboard
-        upower
-        upower-notify
-        gvfs
-
-        brightnessctl
-        power-profiles-daemon
-        grimblast
-        wf-recorder
-        hyprpicker
-        hyprsunset
-        btop
-        matugen
-        swww
     ];
 }
