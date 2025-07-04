@@ -31,6 +31,7 @@
         (import ../../scripts/hyprland-monitor-toggle.nix {inherit pkgs;})
         (import ../../scripts/start-hyprland.nix {inherit pkgs;})
         (import ../../scripts/exc.nix {inherit pkgs;})
+        (import ../../scripts/rofi-launch.nix {inherit pkgs;})
     ];
 
     # uwsm
