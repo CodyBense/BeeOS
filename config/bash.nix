@@ -27,7 +27,6 @@
                 "4." = "cd ../../../..";
                 py = "python3";
                 lg = "lazygit";
-                yazi = "flatpak run io.github.sxyazi.yazi";
             };
             initExtra = ''
                 export PATH=$PATH:$HOME/go/bin
