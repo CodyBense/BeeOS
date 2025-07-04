@@ -1,4 +1,4 @@
-{ lib, username, host, config, pkgs, ... }:
+{ lib, config, pkgs, ... }:
 
 {
     options = {
