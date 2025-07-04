@@ -32,6 +32,7 @@
         nh
         pavucontrol
         pyenv
+        qmk
         ripgrep
         rofi-wayland
         spotify
