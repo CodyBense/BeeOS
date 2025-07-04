@@ -39,6 +39,11 @@
                 eval "$(direnv hook bash)"
                 eval "$(zoxide init bash)"
                 '';
+            profileExtra = ''
+                if uwsm check may-start && uwsm select; then
+                    exec uwsm start default
+                fi
+            '';
         };
         pyenv.enableBashIntegration = true;
         fzf.enableBashIntegration = true;
