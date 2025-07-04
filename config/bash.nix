@@ -5,7 +5,7 @@
         bash = {
             enable = true;
             enableCompletion = true;
-            historyFile = "~/.cache/history";
+            historyFile = "/home/codybense/.cache/history";
             historyFileSize = 1000;
             historySize = 1000;
             shellAliases = {
