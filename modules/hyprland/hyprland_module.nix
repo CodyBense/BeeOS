@@ -7,8 +7,10 @@
         systemd.enable = false;
         settings = {
             monitor = ",preferred,auto,auto";
+            exec = [
+                "hyprland-monitor-toggle"
+            ];
             exec-once = [
-                    "hyprland-monitor-toggle"
                     "dbus-update-activation-environment --systemd -all"
                     "lxqt-policykit-agent"
                     "hyprpanel"
