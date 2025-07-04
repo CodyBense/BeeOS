@@ -9,7 +9,6 @@
 		};
         hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
         hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
-        zen-browser.url = "github:MarceColl/zen-browser-flake";
 	};
 
 	outputs = { self, nixpkgs, home-manager, hyprpanel, ... }@inputs:

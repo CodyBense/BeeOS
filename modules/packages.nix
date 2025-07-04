@@ -50,7 +50,6 @@
         wlogout
         yazi
         zellij
-        inputs.zen-browser.packages."${system}".default
         zoxide
     ];
 }
