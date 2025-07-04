@@ -28,7 +28,7 @@
                 lg = "lazygit";
                 yazi = "flatpak run io.github.sxyazi.yazi";
             };
-            intiExtra = ''
+            initExtra = ''
                 export PATH=$PATH:$HOME/go/bin
                 export MANPAGER='nvim +Man!'
                 export PATH="$PATH:/home/codybense/.local/bin"
