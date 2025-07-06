@@ -6,6 +6,7 @@
         enableBashIntegration = true;
         settings = {
             theme = "catppuccin-frappe";
+            show_startup_tips = "false";
         };
     };
 }
