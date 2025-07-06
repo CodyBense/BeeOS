@@ -30,6 +30,7 @@
         networkmanager
         networkmanagerapplet
         nh
+        orca-slicer
         pavucontrol
         pyenv
         qmk
