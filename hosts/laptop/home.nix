@@ -14,6 +14,7 @@
         ../../config/wlogout.nix
         ../../config/bash.nix
         ../../config/rofi.nix
+        ../../config/zellij.nix
         # ../../config/starship.nix
         # ../../config/hyprpanel.nix
 
