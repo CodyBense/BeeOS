@@ -3,6 +3,7 @@
 {
     environment.systemPackages = with pkgs; [
         arduino-cli
+        arduino-ide
         bat
         brightnessctl
         btop
