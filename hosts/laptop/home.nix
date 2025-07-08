@@ -33,6 +33,7 @@
         (import ../../scripts/start-hyprland.nix {inherit pkgs;})
         (import ../../scripts/exc.nix {inherit pkgs;})
         (import ../../scripts/rofi-launch.nix {inherit pkgs;})
+        (import ../../scripts/waybar-reload.nix {inherit pkgs;})
     ];
 
     # uwsm
