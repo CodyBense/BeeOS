@@ -34,6 +34,7 @@
         nh
         orca-slicer
         pavucontrol
+        power-profiles-daemon
         pyenv
         qmk
         ripgrep
