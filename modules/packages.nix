@@ -24,6 +24,7 @@
         hyprpicker
         hyprsunset
         rose-pine-hyprcursor
+        killall
         lazygit
         libnotify
         matugen
