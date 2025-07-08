@@ -202,7 +202,7 @@
                     "$mainMod SHIFT, W, exec, bash rofi-wallpaper"
                     ", PrintScreen, exec, /home/codybense/.config/ags/services/snapshot"
                     "$mainMod SHIFT, m, exec, hyprland-monitor-toggle"
-                    "$mainMod , R, exec, waybar-reload"
+                    "$mainMod , R, exec, restart-waybar"
                     ];
 
             bindm = [
