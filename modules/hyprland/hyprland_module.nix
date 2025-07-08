@@ -6,14 +6,13 @@
         xwayland.enable = true;
         systemd.enable = false;
         settings = {
-            monitor = ",preferred,auto,auto";
-            exec = [
-                "hyprland-monitor-toggle"
-            ];
+            monitor = ",preferred,auto,1";
             exec-once = [
+                    "hyprland-monitor-toggle"
                     "dbus-update-activation-environment --systemd -all"
                     "lxqt-policykit-agent"
-                    "hyprpanel"
+                    "waybar"
+                    # "hyprpanel"
             ];
             # "$terminal" = "ghostty";
             # "$fileManager" = "thunar";
