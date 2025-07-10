@@ -11,7 +11,7 @@
                     "hyprland-monitor-toggle"
                     "dbus-update-activation-environment --systemd -all"
                     "lxqt-policykit-agent"
-                    "waybar"
+                    "start-hyprland"
                     # "hyprpanel"
             ];
             # "$terminal" = "ghostty";
