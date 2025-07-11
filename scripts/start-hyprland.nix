@@ -7,6 +7,8 @@ pkgs.writeShellScriptBin "start-hyprland" ''
     sleep 0.5
     swww-deamon &
 
+    swww img ~/BeeOS/wallpapers/cm-black-home.png
+
     pkill -q waybar
     sleep 0.5
     waybar &
