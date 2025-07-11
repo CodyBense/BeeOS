@@ -5,7 +5,7 @@ pkgs.writeShellScriptBin "start-hyprland" ''
 
     killall -9 swww-daemon
     sleep 0.5
-    swww-deamon &
+    swww-daemon &
 
     swww img ~/BeeOS/wallpapers/cm-black-hole.png
 
