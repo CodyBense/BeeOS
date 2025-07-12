@@ -5,7 +5,7 @@
         go_module.enable = lib.mkEnableOption "enables go_module";
     };
 
-    config = lib.mkIf config.python_module.enable {
+    config = lib.mkIf config.go_module.enable {
         environment.systemPackages = with pkgs; [
             go
         ];
