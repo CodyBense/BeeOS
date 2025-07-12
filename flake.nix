@@ -15,9 +15,13 @@
             url = "github:danth/stylix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        sops-nix = {
+            url = "github:Mic92/sops-nix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 	};
 
-	outputs = { self, nixpkgs, home-manager, hyprpanel, stylix, ... }@inputs:
+	outputs = { self, nixpkgs, home-manager, hyprpanel, ... }@inputs:
 	let
 		system = "x86_64-linux";
 		host = "laptop";
@@ -37,7 +41,8 @@
 				};
 				modules = [
 					./hosts/${host}/configuration.nix
-                    stylix.nixosModules.stylix
+                    inputs.stylix.nixosModules.stylix
+                    inputs.sops-nix.nixosModules.sops
                     home-manager.nixosModules.home-manager
 						{
 							home-manager.extraSpecialArgs = {
