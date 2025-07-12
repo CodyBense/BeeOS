@@ -7,11 +7,17 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-        hyprpanel.url = "github:Jas-SinghFSU/HyprPanel";
-        hyprpanel.inputs.nixpkgs.follows = "nixpkgs";
+        hyprpanel = {
+            url = "github:Jas-SinghFSU/HyprPanel";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
+        stylix = {
+            url = "github:danth/stylix";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 	};
 
-	outputs = { self, nixpkgs, home-manager, hyprpanel, ... }@inputs:
+	outputs = { self, nixpkgs, home-manager, hyprpanel, stylix, ... }@inputs:
 	let
 		system = "x86_64-linux";
 		host = "laptop";
@@ -31,7 +37,8 @@
 				};
 				modules = [
 					./hosts/${host}/configuration.nix
-						home-manager.nixosModules.home-manager
+                    stylix.nixosModules.stylix
+                    home-manager.nixosModules.home-manager
 						{
 							home-manager.extraSpecialArgs = {
 								inherit inputs;
