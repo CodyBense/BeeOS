@@ -67,10 +67,10 @@
             };
 
             # group = {
-            #     "col.border_active" = "rgb(B8BB26) rgb(EBDBB2) 45deg";
-            #     "col.border_inactive" = "rgb(282828) rgb(EBDBB2) 45deg";
-            #     "col.border_locked_active" = "rgb(B8BB26) rgb(EBDBB2) 45deg";
-            #     "col.border_locked_inactive" = "rgba(B4BEFECC) rgba(6C7086CC) 45deg";
+                "col.border_active" = "rgb(${config.stylix.base16Scheme.base0B}) rgb(${config.stylix.base16Scheme.base09}) 45deg";
+                "col.border_inactive" = "rgb(${config.stylix.base16Scheme.base01}) rgb(${config.stylix.base16Scheme.base09}) 45deg";
+                "col.border_locked_active" = "rgb(${config.stylix.base16Scheme.base0B} rgb(${config.stylix.base16Scheme.base09}) 45deg";
+                "col.border_locked_inactive" = "rgb(${config.stylix.base16Scheme.base01}) rgb(${config.stylix.base16Scheme.base09}) 45deg";
             # };
 
             decoration = {
