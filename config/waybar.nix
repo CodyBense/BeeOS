@@ -1,21 +1,26 @@
-{ pkgs, config, lib, host, ... }:
-let
-   betterTransisitons = "all 0.3s cubic-bezier(.55, -0.68, .48, 1.682)";
-   inherit (import ../hosts/${host}/variables.nix} clock24h;
-in
-with lib;
+{ pkgs, ... }:
 {
     programs.waybar = {
         enable = true;
         package = pkgs.waybar;
         settings = [
             {
-                layer = "top";
                 position = "top";
+                spacing = 4;
+                margin-top = 4;
+                margin-left = 4;
+                margin-right = 4;
+                margin-bottom = 4;
                 modules-left = [ "hyprland/workspaces" ];
                 modules-center = [ "hyprland/window" ];
-                modules-right = [ "network", "pulseaudio", "battery", "clock" ];
-            };
+                modules-right = [ "pulseaudio" "network" "backlight" "battery" "power-profiles-daemon" ];
+
+                "hyprland/workspaces" = {
+                    disable-scroll = true;
+                    all-outputs = true;
+                    warp-on-scroll = false;
+                };
+            }
         ];
     };
 }
