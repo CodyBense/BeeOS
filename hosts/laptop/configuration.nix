@@ -10,6 +10,7 @@
       ./hardware-configuration.nix
       ../../modules/packages.nix
       ../../modules/code_bundle.nix
+      ../../modules/stylix.nix
     ];
 
   # Bootloader.
