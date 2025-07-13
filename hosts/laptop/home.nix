@@ -15,6 +15,7 @@
         ../../config/bash.nix
         ../../config/rofi.nix
         ../../config/zellij.nix
+        ../../config/waybar.nix
         # ../../config/starship.nix
         # ../../config/hyprpanel.nix
 
