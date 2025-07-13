@@ -9,11 +9,11 @@
             modules-center = [ "clock" ];
             modules-right = [ "pulseaudio" "network" "backlight" "battery" "power-profiles-daemon" ];
 
-            # "hyprland/workspaces" = {
-            #     disable-scroll = true;
-            #     all-outputs = true;
-            #     warp-on-scroll = false;
-            # };
+# "hyprland/workspaces" = {
+#     disable-scroll = true;
+#     all-outputs = true;
+#     warp-on-scroll = false;
+# };
             clock = {
                 format = "<span foreground='#f5c2e7'>  </span>{:%a %d %H:%M}";
                 tooltip-format = "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>";
@@ -66,9 +66,9 @@
                 };
             };
         }
-    };];
-    style = ''
-        /* @import "mocha.css";  */
+    ];
+    style =  
+    ''
         @define-color rosewater #f5e0dc;
         @define-color flamingo #f2cdcd;
         @define-color pink #f5c2e7;
@@ -165,12 +165,12 @@
         #backlight,
         #power-profiles-daemon,
         #scratchpad {
-          margin-top: 2px;
-          margin-bottom: 2px;
-          margin-left: 4px;
-          margin-right: 4px;
-          padding-left: 4px;
-          padding-right: 4px;
+            margin-top: 2px;
+            margin-bottom: 2px;
+            margin-left: 4px;
+            margin-right: 4px;
+            padding-left: 4px;
+            padding-right: 4px;
         }
 
         #clock {
@@ -180,7 +180,7 @@
 
         #clock.date {
             color: @mauve;
-            border-bottom: 2px solid @mauve;
+           border-bottom: 2px solid @mauve;
         }
 
         #pulseaudio {
@@ -230,5 +230,6 @@
         #power-profiles-daemon.power-saver {
             color: @green;
         }
-    ''
+      '';
+  };
 }
