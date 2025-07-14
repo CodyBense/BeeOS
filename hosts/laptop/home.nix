@@ -35,6 +35,7 @@
         (import ../../scripts/exc.nix {inherit pkgs;})
         (import ../../scripts/rofi-launch.nix {inherit pkgs;})
         (import ../../scripts/restart-waybar.nix {inherit pkgs;})
+        (import ../../scripts/blue_light_filter.nix {inherit pkgs;})
     ];
 
     # uwsm
