@@ -8,7 +8,6 @@
         brightnessctl
         btop
         cmake
-        cron
         direnv
         dmenu
         docker-compose
