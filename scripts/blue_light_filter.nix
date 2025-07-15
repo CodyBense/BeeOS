@@ -12,10 +12,10 @@ pkgs.writeShellScriptBin "blue_light_filter" ''
 
     if [[ -z "$gama" ]]; then
         notify-send "Hyprsunset: Setting temp to $temp"
-        hyprsunset -t temp &
+        hyprsunset -t $temp &
     else
         notify-send "Hyprsunset: Setting temp to $temp and gama to $gama"
-        hyprsunset -t temp -g $gama &
+        hyprsunset -t $temp -g $gama &
     fi
 
 ''
