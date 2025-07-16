@@ -10,7 +10,7 @@
       ./hardware-configuration.nix
       ../../modules/packages.nix
       ../../modules/code_bundle.nix
-      ../../modules/cron.nix
+      ../../modules/systemd.nix
       # ../../modules/stylix.nix
     ];
 
