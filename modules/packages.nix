@@ -8,6 +8,7 @@
         brightnessctl
         btop
         cmake
+        dolphin
         direnv
         dmenu
         docker-compose
