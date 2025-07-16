@@ -8,7 +8,7 @@
         brightnessctl
         btop
         cmake
-        dolphin
+        kdePackages.dolphin
         direnv
         dmenu
         docker-compose
