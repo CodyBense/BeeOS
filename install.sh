@@ -14,3 +14,7 @@ mkdir .config/nvim
 git clone https://github.com/CodyBense/dotfiles.git
 
 ln -s $HOME/dotfiles/nvim/.config/nvim $HOME/.config/nvim/
+
+flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
+
+flatpak install flathub app.zen_browser.zen
