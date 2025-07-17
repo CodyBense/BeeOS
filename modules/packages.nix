@@ -38,7 +38,7 @@
         power-profiles-daemon
         pyenv
         qmk
-        quickshell
+        inputs.quickshell.packages.${pkgs.system}.default
         ripgrep
         rofi-wayland
         spotify
