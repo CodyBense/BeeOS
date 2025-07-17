@@ -3,10 +3,8 @@
 {
     systemd.timers."blue_light_filter" = {
         wantedBy = [ "timers.target" ];
-        timerConfig = {
-            onCalendar = "* *-*-* 21:00:00";
-            Unit = "blue_light_filter.servcie";
-        };
+        partOf = [ "blue_light_filter.service" ];
+        timerConfig.onCalendar = [ "21:00:00" ];
     };
 
     systemd.services."blue_light_filter" = {
