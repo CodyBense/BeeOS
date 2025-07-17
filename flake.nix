@@ -19,6 +19,10 @@
             url = "github:Mic92/sops-nix";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        quickshell = {
+            url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+            inputs.nixpkgs.follows = "nixpkgs";
+        };
 	};
 
 	outputs = { self, nixpkgs, home-manager, hyprpanel, ... }@inputs:
