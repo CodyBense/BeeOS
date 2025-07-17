@@ -38,6 +38,7 @@
         power-profiles-daemon
         pyenv
         qmk
+        quickshell
         ripgrep
         rofi-wayland
         spotify
