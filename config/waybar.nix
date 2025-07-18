@@ -7,7 +7,7 @@
             position = "top";
             modules-left = [ "hyprland/workspaces" ];
             modules-center = [ "clock" ];
-            modules-right = [ "pulseaudio" "network" "backlight" "battery" "power-profiles-daemon" "custom/notifcation" ];
+            modules-right = [ "pulseaudio" "network" "backlight" "battery" "power-profiles-daemon" "custom/notification" ];
 
 # "hyprland/workspaces" = {
 #     disable-scroll = true;
@@ -254,12 +254,15 @@
 
         #power-profiles-daemon.performance {
             color: @red;
+            border-bottom: 2px solid @red;
         }
         #power-profiles-daemon.balanced {
             color: @blue;
+            border-bottom: 2px solid @blue;
         }
         #power-profiles-daemon.power-saver {
             color: @green;
+            border-bottom: 2px solid @green;
         }
       '';
   };
