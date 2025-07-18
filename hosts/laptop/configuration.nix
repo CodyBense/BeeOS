@@ -165,6 +165,7 @@
       maple-mono.NF
       mononoki
       noto-fonts-cjk-sans
+      nerd-fonts.terminess-ttf
   ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
