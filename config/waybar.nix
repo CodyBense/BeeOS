@@ -7,7 +7,7 @@
             position = "top";
             modules-left = [ "hyprland/workspaces" ];
             modules-center = [ "clock" ];
-            modules-right = [ "pulseaudio" "network" "backlight" "battery" "power-profiles-daemon" ];
+            modules-right = [ "pulseaudio" "network" "backlight" "battery" "power-profiles-daemon" "custom/notifcation" ];
 
 # "hyprland/workspaces" = {
 #     disable-scroll = true;
@@ -64,6 +64,27 @@
                     balanced = "";
                     power-saver = "";
                 };
+            };
+
+            "custom/notification" = {
+                tooltip = false;
+                format = "{icon}";
+                format-icons = {
+                    notification = "<span foreground='red'><sup></sup></span>";
+                    none = "";
+                    dnd-notification = "<span foreground='red'><sup></sup></span>";
+                    dnd-none = "";
+                    inhibited-notification = "<span foreground='red'><sup></sup></span>";
+                    inhibited-none = "";
+                    dnd-inhibited-notification = "<span foreground='red'><sup></sup></span>";
+                    dnd-inhibited-none = "";
+                };
+                return-type = "json";
+                exec-if = "which swaync-client";
+                exec = "swaync-client -swb";
+                on-click = "swaync-client -t -sw";
+                on-click-right = "swaync-client -d -sw";
+                escape = true;
             };
         }
     ];
@@ -204,6 +225,12 @@
             border-bottom: 2px solid @yellow;
         }
 
+        #custom-notification {
+            font-size: 25px;
+            color: @pink;
+            border-bottom: 2px solid @pink;
+        }
+
         /* If workspaces is the leftmost module, omit left margin */
         .modules-left>widget:first-child>#workspaces {
             margin-left: 0;
@@ -219,6 +246,10 @@
             border-radius: 15px;
             padding-left: 6px;
             padding-right: 6px;
+        }
+
+        #power-profiles-daemon {
+            font-size: 25px;
         }
 
         #power-profiles-daemon.performance {
