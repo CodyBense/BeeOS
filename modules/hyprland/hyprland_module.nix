@@ -131,6 +131,10 @@
                     "blur,waybar"
             ];
 
+            windowrule = [
+              "float, title:file-manager"  
+            ];
+
             "$mainMod" = "SUPER";
             "$terminal" = "ghostty";
             "$broswer" = "zen-browser";
@@ -141,7 +145,7 @@
                     "$mainMod, T, exec, $terminal"
                     "$mainMod, Q, killactive,"
                     "$mainMod, DELETE, exit,"
-                    "$mainMod, E, exec, $fileManager"
+                    "$mainMod, E, exec, launch-file-manager"
                     "$mainMod, V, togglefloating,"
                     "$mainMod SHIFT, V, fullscreen "
                     "$mainMod, SPACE, exec, rofi-launch"
