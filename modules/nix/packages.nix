@@ -19,9 +19,12 @@
         gcc
         gh
         ghostty
+        git
         grimblast
+        home-manager
         hyprcursor
         hypridle
+        hyprpanel
         hyprpicker
         hyprsunset
         rose-pine-hyprcursor
@@ -53,6 +56,7 @@
         unzip
         waybar
         wf-recorder
+        wget
         wl-clipboard
         wlogout
         yazi
