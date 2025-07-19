@@ -11,6 +11,8 @@
       ../../modules/nix/packages.nix
       ../../modules/nix/code_bundle.nix
       ../../modules/nix/systemd.nix
+      ../../modules/nix/systemd.nix
+      ../../modules/nix/fonts.nix
       # ../../modules/nix/stylix.nix
     ];
 
@@ -74,19 +76,6 @@
   };
 
   environment.variables.EDITOR = "nvim";
-
-  # List packages installed in system profile. To search, run:
-  # $ nix search wget
-  environment.systemPackages = with pkgs; [
-  #  vim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
-     wget
-     neovim
-     git
-     ghostty
-     firefox
-     home-manager
-     hyprpanel
-  ];
 
   # Enables nix flakes
 
@@ -157,16 +146,6 @@
   # this value at the release version of the first install of this system.
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
-
-  fonts.packages = with pkgs; [
-      font-awesome
-      jetbrains-mono
-      cascadia-code
-      maple-mono.NF
-      mononoki
-      noto-fonts-cjk-sans
-      nerd-fonts.terminess-ttf
-  ];
 
   system.stateVersion = "25.05"; # Did you read the comment?
 
