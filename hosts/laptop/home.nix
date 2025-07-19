@@ -26,13 +26,13 @@
 
     # Scripts
     home.packages = [
-        (import ../../scripts/hyprland-monitor-toggle.nix {inherit pkgs;})
-        (import ../../scripts/start-hyprland.nix {inherit pkgs;})
-        (import ../../scripts/exc.nix {inherit pkgs;})
-        (import ../../scripts/rofi-launch.nix {inherit pkgs;})
-        (import ../../scripts/restart-waybar.nix {inherit pkgs;})
-        (import ../../scripts/blue_light_filter.nix {inherit pkgs;})
-        (import ../../scripts/launch-file-manager.nix {inherit pkgs;})
+        (import ../../modules/home/scripts/hyprland-monitor-toggle.nix {inherit pkgs;})
+        (import ../../modules/home/scripts/start-hyprland.nix {inherit pkgs;})
+        (import ../../modules/home/scripts/exc.nix {inherit pkgs;})
+        (import ../../modules/home/scripts/rofi-launch.nix {inherit pkgs;})
+        (import ../../modules/home/scripts/restart-waybar.nix {inherit pkgs;})
+        (import ../../modules/home/scripts/blue_light_filter.nix {inherit pkgs;})
+        (import ../../modules/home/scripts/launch-file-manager.nix {inherit pkgs;})
     ];
 
     # uwsm
