@@ -13,6 +13,7 @@ My NixOS config
 ### TODO:
 
 - Reorganize file structure
-    - Can look into "standard" ways
+    - Can look into "standard" ways, PARTIALLY DONE
+        - [read more](https://nixos-and-flakes.thiscute.world/nixos-with-flakes/modularize-the-configuration)
 - Split up configuration.nix to sub modules
 
