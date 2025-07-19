@@ -16,4 +16,5 @@ My NixOS config
     - Can look into "standard" ways, PARTIALLY DONE
         - [read more](https://nixos-and-flakes.thiscute.world/nixos-with-flakes/modularize-the-configuration)
 - Split up configuration.nix to sub modules
+- updated install script to create new host dir if host name doesn't exist
 
