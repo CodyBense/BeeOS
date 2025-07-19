@@ -23,9 +23,10 @@
             url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+        nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 	};
 
-	outputs = { self, nixpkgs, home-manager, hyprpanel, ... }@inputs:
+	outputs = { self, nixpkgs, home-manager, hyprpanel, nix-flatpak, ... }@inputs:
 	let
 		system = "x86_64-linux";
 		host = "laptop";
@@ -47,6 +48,7 @@
 					./hosts/${host}/configuration.nix
                     inputs.stylix.nixosModules.stylix
                     inputs.sops-nix.nixosModules.sops
+                    nix-flatpak.nixosModules.nix-flatpak
                     home-manager.nixosModules.home-manager
 						{
 							home-manager.extraSpecialArgs = {
