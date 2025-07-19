@@ -1,9 +1,12 @@
 #!/usr/bin/env bash
 
 echo "Building from config"
-echo "Enter target host name"
 
-echo $hostName
+read -p "Enter target host name, defaults to laptop if none entered: " hostName
+
+if [ -z "$hostName" ]; then
+    hostname=laptop
+fi
 
 sudo cp /etc/nixos/hardware-configuration.nix hosts/$hostName/
 
