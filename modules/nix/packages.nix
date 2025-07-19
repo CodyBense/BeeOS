@@ -28,6 +28,7 @@
         hyprpicker
         hyprsunset
         rose-pine-hyprcursor
+        kanata
         killall
         kitty
         lazygit
