@@ -8,10 +8,10 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ../../modules/packages.nix
-      ../../modules/code_bundle.nix
-      ../../modules/systemd.nix
-      # ../../modules/stylix.nix
+      ../../modules/nix/packages.nix
+      ../../modules/nix/code_bundle.nix
+      ../../modules/nix/systemd.nix
+      # ../../modules/nix/stylix.nix
     ];
 
   # Bootloader.

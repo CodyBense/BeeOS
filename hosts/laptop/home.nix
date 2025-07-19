@@ -8,25 +8,21 @@
 	home.stateVersion = "25.11";
 
 	# Import program configs
-	## to be stored in ~/BeeOS/config/
 	imports = [
-        ../../modules/hyprland/hyprland_module.nix
-        ../../config/wlogout.nix
-        ../../config/bash.nix
-        ../../config/rofi.nix
-        ../../config/zellij.nix
-        ../../config/waybar.nix
-        # ../../config/starship.nix
-        # ../../config/hyprpanel.nix
+        ../../modules/home/hypr/hyprland.nix
+        ../../modules/home/wlogout.nix
+        ../../modules/home/bash.nix
+        ../../modules/home/rofi.nix
+        ../../modules/home/zellij.nix
+        ../../modules/home/waybar.nix
+        # ../../modules/home/starship.nix
+        # ../../modules/home/hyprpanel.nix
 
-        ../../modules/home_bundle.nix
+        ../../modules/home/home_bundle.nix
 	];
 
 	# place files in home dir
 	## home.file."</desired/path>" = { source = </path/>; recursive; };
-
-	# scripts
-	## check old flake for this
 
     # Scripts
     home.packages = [
