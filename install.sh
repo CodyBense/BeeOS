@@ -18,12 +18,6 @@ mkdir .config/nvim
 
 ln -s $HOME/dotfiles/nvim/.config/nvim $HOME/.config/nvim/
 
-echo "Adding flatpaks"
-
-flatpak remote-add --if-not-exists flathub https://dl.flathub.org/repo/flathub.flatpakrepo
-
-flatpak install flathub app.zen_browser.zen
-
 echo "Creating directories"
 
 if [ ! -d $HOME/workspaces/github.com/CodyBense ]; then
