@@ -26,6 +26,7 @@
         hyprsunset
         rose-pine-hyprcursor
         killall
+        kitty
         lazygit
         libnotify
         matugen
