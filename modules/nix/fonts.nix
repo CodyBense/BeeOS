@@ -8,6 +8,6 @@
         maple-mono.NF
         mononoki
         noto-fonts-cjk-sans
-        nerdfont.terminess-ttf
+        nerd-fonts.terminess-ttf
     ];
 }
