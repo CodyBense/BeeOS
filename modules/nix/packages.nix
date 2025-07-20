@@ -55,6 +55,7 @@
         tmux
         tree
         unzip
+        vlc
         waybar
         wf-recorder
         wget
