@@ -82,27 +82,27 @@
             }
 
             #lock {
-                background-image: image(url("/home/codybense/BeeOS/config/wlogout/lock.png"));
+                background-image: image(url("/home/codybense/BeeOS/modules/home/wlogout/lock.png"));
             }
 
             #logout {
-                background-image: image(url("/home/codybense/BeeOS/config/wlogout/logout.png"));
+                background-image: image(url("/home/codybense/BeeOS/modules/home/wlogout/logout.png"));
             }
 
             #suspend {
-                background-image: image(url("/home/codybense/BeeOS/config/wlogout/suspend.png"));
+                background-image: image(url("/home/codybense/BeeOS/modules/home/wlogout/suspend.png"));
             }
 
             #shutdown {
-                background-image: image(url("/home/codybense/BeeOS/config/wlogout/shutdown.png"));
+                background-image: image(url("/home/codybense/BeeOS/modules/home/wlogout/shutdown.png"));
             }
 
             #reboot {
-                background-image: image(url("/home/codybense/BeeOS/config/wlogout/reboot.png"));
+                background-image: image(url("/home/codybense/BeeOS/modules/home/wlogout/reboot.png"));
             }
 
             #hibernate {
-                background-image: image(url("/home/codybense/BeeOS/config/wlogout/hibernate.png"));
+                background-image: image(url("/home/codybense/BeeOS/modules/home/wlogout/hibernate.png"));
             }
         '';
     };
