@@ -20,15 +20,15 @@
                         hold-time 200
                     )
 
-                    (defailas
+                    (defalias
                         a-mod (tap-hold $tap-time $hold-time a lmet)
                         s-mod (tap-hold $tap-time $hold-time s lalt)
                         d-mod (tap-hold $tap-time $hold-time d lsft)
-                        f-mod (tap-hold $tap-time $hold-time f lclt)
+                        f-mod (tap-hold $tap-time $hold-time f lctl)
                         ;-mod (tap-hold $tap-time $hold-time ; rmet)
                         l-mod (tap-hold $tap-time $hold-time l ralt)
                         k-mod (tap-hold $tap-time $hold-time k rsft)
-                        j-mod (tap-hold $tap-time $hold-time j rclt)
+                        j-mod (tap-hold $tap-time $hold-time j rctl)
                     )
 
                     (deflayer base 
