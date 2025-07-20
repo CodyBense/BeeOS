@@ -1,0 +1,42 @@
+{ ... }:
+
+{
+    services.kanata = {
+        enable = true;
+        keyboards = {
+            internalKeyboard = {
+                devices = [
+                    "dev/input/by-path/platform-i8042-serio-0-event-kbd"
+                ];
+                extraDefCfg = "process-unmapped-keys yes";
+                config = ''
+                    (defsrc
+                        a s d f
+                        j k l ;
+                    )
+
+                    (defvar
+                        tap-time 200
+                        hold-time 200
+                    )
+
+                    (defailas
+                        a-mod (tap-hold $tap-time $hold-time a lmet)
+                        s-mod (tap-hold $tap-time $hold-time s lalt)
+                        d-mod (tap-hold $tap-time $hold-time d lsft)
+                        f-mod (tap-hold $tap-time $hold-time f lclt)
+                        ;-mod (tap-hold $tap-time $hold-time ; rmet)
+                        l-mod (tap-hold $tap-time $hold-time l ralt)
+                        k-mod (tap-hold $tap-time $hold-time k rsft)
+                        j-mod (tap-hold $tap-time $hold-time j rclt)
+                    )
+
+                    (deflayer base 
+                        @a-mod @s-mod @d-mod @f-mod
+                        @j-mod @k-mod @l-mod @;-mod
+                    )
+                '';
+            };
+        };
+    };
+}
