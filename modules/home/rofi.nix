@@ -9,7 +9,10 @@
                 "drun"
             ];
             location = "center";
-            font = "JetBrainsMono Nerd Font Mono 12";
+            font = "Terminess Nerd Font Mono 12";
+            extraConfig = {
+                show-icons = true;
+            };
 
             theme =
             let
