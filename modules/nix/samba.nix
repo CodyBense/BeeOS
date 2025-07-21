@@ -1,7 +1,7 @@
 { pkgs, ... }:
 
 {
-    fileSystems."/mnt/share" = {
+    fileSystems."/mnt/vault" = {
         device = "//192.168.1.243/data";
         fsType = "cifs";
         options = let
