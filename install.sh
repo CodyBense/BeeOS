@@ -1,5 +1,9 @@
 #!/usr/bin/env bash
 
+if ! [ $(id -u) = 0 ]; then
+    echo "The script needs to be run as root" >&2
+    exit 1
+fi
 echo "Building from config"
 
 read -p "Enter target host name, defaults to laptop if none entered: " hostName
@@ -30,6 +34,13 @@ fi
 if [ ! -d $HOME/workspaces/Projects ]; then
     mkdir -p $HOME/workspaces/Projects
 fi
+
+echo "Adding info for samba share"
+
+read -p "Enter username for vault samba share: " username
+read -p "Enter passwrod for vault samba share: " password
+
+echo -e "username=${username}\npassword=${password}" > /etc/nixos/smb-secrets
 
 echo "Completed setup"
 echo "Restarting"
