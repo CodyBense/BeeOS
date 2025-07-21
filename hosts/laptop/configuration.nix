@@ -74,7 +74,7 @@
   nixpkgs.config.allowUnfree = true;
 
   environment.sessionVariables = {
-      FLAKE = "/home/codybense/BeeOS";
+      NH_FLAKE = "/home/codybense/BeeOS";
   };
 
   environment.variables.EDITOR = "nvim";
