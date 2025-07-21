@@ -46,6 +46,7 @@
         inputs.quickshell.packages.${pkgs.system}.default
         ripgrep
         rofi-wayland
+        rsync
         spotify
         starship
         swayimg
