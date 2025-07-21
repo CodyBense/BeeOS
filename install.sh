@@ -4,12 +4,19 @@ if ! [ $(id -u) = 0 ]; then
     echo "The script needs to be run as root" >&2
     exit 1
 fi
+
 echo "Building from config"
 
 read -p "Enter target host name, defaults to laptop if none entered: " hostName
 
 if [ -z "$hostName" ]; then
     hostname=laptop
+fi
+
+if [ ! -d $HOME/BeeOS/hosts/$hostName ]; then
+    mkdir -p $HOME/BeeOS/hosts/E+$hostName
+    sudo cp /etc/nixos/configuration.nix hosts/$hostName
+    sudo cp /etc/nixos/hardware-configuration.nix hosts/$hostName
 fi
 
 sudo cp /etc/nixos/hardware-configuration.nix hosts/$hostName/
