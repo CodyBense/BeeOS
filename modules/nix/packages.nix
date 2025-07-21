@@ -25,6 +25,7 @@
         home-manager
         hyprcursor
         hypridle
+        hyprlock
         hyprpanel
         hyprpicker
         hyprsunset
