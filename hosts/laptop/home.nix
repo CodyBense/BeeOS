@@ -10,6 +10,7 @@
 	# Import program configs
 	imports = [
         ../../modules/home/hypr/hyprland.nix
+        ../../modules/home/hypr/hyprlock.nix
         ../../modules/home/wlogout.nix
         ../../modules/home/bash.nix
         ../../modules/home/rofi.nix
