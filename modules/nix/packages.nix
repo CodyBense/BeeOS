@@ -7,6 +7,7 @@
         bat
         brightnessctl
         btop
+        cifs-utils
         cmake
         kdePackages.dolphin
         direnv
@@ -41,6 +42,7 @@
         orca-slicer
         pavucontrol
         power-profiles-daemon
+        psmisc
         pyenv
         qmk
         inputs.quickshell.packages.${pkgs.system}.default
