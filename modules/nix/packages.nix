@@ -35,6 +35,7 @@
         kitty
         lazygit
         libnotify
+        localsend
         matugen
         neovim
         networkmanager
