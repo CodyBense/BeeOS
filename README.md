@@ -7,7 +7,7 @@ My NixOS config
 ## How to install
 
 - clone repo
-- run ./install.sh
+- run sudo ./install.sh
 
 ---
 
