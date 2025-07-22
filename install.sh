@@ -38,8 +38,8 @@ if [ ! -d $HOME/workspaces/github.com/CodyBense ]; then
     mkdir -p $HOME/workspaces/github.com/CodyBense
 fi
 
-if [ ! -d $HOME/workspaces/Projects ]; then
-    mkdir -p $HOME/workspaces/Projects
+if [ ! -d $HOME/workspaces/projects ]; then
+    mkdir -p $HOME/workspaces/projects
 fi
 
 echo "Adding info for samba share"
