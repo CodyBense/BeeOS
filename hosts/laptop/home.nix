@@ -34,6 +34,7 @@
         (import ../../modules/home/scripts/restart-waybar.nix {inherit pkgs;})
         (import ../../modules/home/scripts/blue_light_filter.nix {inherit pkgs;})
         (import ../../modules/home/scripts/launch-file-manager.nix {inherit pkgs;})
+        (import ../../modules/home/scripts/launch-nmtui.nix {inherit pkgs;})
     ];
 
     # uwsm
