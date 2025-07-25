@@ -134,6 +134,8 @@
             windowrule = [
               "float, title:file-manager"  
               "size 1500 1000, title:file-manager"
+              "float, title:nmtui"  
+              "size 1500 1000, title:nmtui"
             ];
 
             "$mainMod" = "SUPER";
