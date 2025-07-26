@@ -13,6 +13,7 @@
                     (defsrc
                         a s d f
                         j k l ;
+                        caps
                     )
 
                     (defvar
@@ -29,11 +30,13 @@
                         l-mod (tap-hold $tap-time $hold-time l ralt)
                         k-mod (tap-hold $tap-time $hold-time k rsft)
                         j-mod (tap-hold $tap-time $hold-time j rctl)
+                        caps-mod esc
                     )
 
                     (deflayer base 
                         @a-mod @s-mod @d-mod @f-mod
                         @j-mod @k-mod @l-mod @;-mod
+                        @caps-mod
                     )
                 '';
             };
