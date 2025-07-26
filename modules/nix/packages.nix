@@ -60,6 +60,7 @@
         tmux
         tree
         unzip
+        vesktop
         vlc
         waybar
         wf-recorder
