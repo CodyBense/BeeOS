@@ -130,6 +130,21 @@
                     }
                 }
             }
+
+            keybinds {
+                normal {
+                    bind "Ctrl l" { SwitchToMode "locked"; }
+                    bind "Ctrl p" { SwitchToMode "pane"; }
+                    bind "Ctrl t" { SwitchToMode "tab"; }
+                    bind "Ctrl n" { SwitchToMode "move"; }
+                    bind "Ctrl o" { SwitchToMode "session"; }
+                    bind "Ctrl q" { Quit; }
+                }
+
+                locked {
+                    bind "Ctrl l" { SwitchToMode "normal"; }
+                }
+            }
             '';
         };
 }
