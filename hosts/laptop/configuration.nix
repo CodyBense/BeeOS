@@ -129,10 +129,11 @@
 
   # Flatpak
   services.flatpak.enable = true;
-  services.flatpak.update.auto = {
-      enable = true;
-      onCalendar = "weekly";
-  };
+  services.flatpak.update.onActivation = true;
+  # services.flatpak.update.auto = {
+  #     enable = true;
+  #     onCalendar = "weekly";
+  # };
 
   # Power-profiles-daemon
   services.power-profiles-daemon.enable = true;
