@@ -7,10 +7,6 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-        hyprpanel = {
-            url = "github:Jas-SinghFSU/HyprPanel";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
         stylix = {
             url = "github:danth/stylix";
             inputs.nixpkgs.follows = "nixpkgs";
@@ -26,13 +22,12 @@
         nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 	};
 
-	outputs = { self, nixpkgs, home-manager, hyprpanel, nix-flatpak, ... }@inputs:
+	outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }@inputs:
 	let
 		system = "x86_64-linux";
 		host = "laptop";
 		username = "codybense";
         overlays = [
-            inputs.hyprpanel.overlay
         ];
 	in
 	{
@@ -61,7 +56,6 @@
 							home-manager.backupFileExtension = "backup";
 							home-manager.users.${username} = ./hosts/${host}/home.nix;
 						}
-                        { nixpkgs.overlays = [ inputs.hyprpanel.overlay ]; }
 				];
 			};
 		};
