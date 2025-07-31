@@ -20,9 +20,17 @@
             inputs.nixpkgs.follows = "nixpkgs";
         };
         nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
+        nvf.url = "github:notashelf/nvf";
 	};
 
-	outputs = { self, nixpkgs, home-manager, nix-flatpak, ... }@inputs:
+    outputs = {
+        self,
+        nixpkgs,
+        home-manager,
+        nix-flatpak,
+        nvf,
+        ...
+    }@inputs:
 	let
 		system = "x86_64-linux";
 		host = "laptop";
@@ -31,6 +39,14 @@
         ];
 	in
 	{
+        packages.x86_64-linux.nvf = 
+            (nvf.lib.neovimConfiguration {
+                pkgs = nixpkgs.legacyPackages.x86_64-linux;
+                modules = [
+                    ./modules/nvf/nvf.nix
+                ];
+            })
+            .neovim;
 		nixosConfigurations = {
 			${host} = nixpkgs.lib.nixosSystem {
 				specialArgs = {
