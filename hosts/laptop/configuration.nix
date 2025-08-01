@@ -35,6 +35,8 @@
   # Enable bluetooth
   hardware.bluetooth.enable = true;
 
+  hardware.enableAllFirmware = true;
+
   # Enable Pipewire
   security.rtkit.enable = true;
   services.pipewire = {
