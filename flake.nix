@@ -7,20 +7,19 @@
 			url = "github:nix-community/home-manager";
 			inputs.nixpkgs.follows = "nixpkgs";
 		};
-        stylix = {
-            url = "github:danth/stylix";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-        sops-nix = {
-            url = "github:Mic92/sops-nix";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-        quickshell = {
-            url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
-            inputs.nixpkgs.follows = "nixpkgs";
-        };
-        nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
-        nvf.url = "github:notashelf/nvf";
+		stylix = {
+		    url = "github:danth/stylix";
+		    inputs.nixpkgs.follows = "nixpkgs";
+		};
+		sops-nix = {
+		    url = "github:Mic92/sops-nix";
+		    inputs.nixpkgs.follows = "nixpkgs";
+		};
+		quickshell = {
+		    url = "git+https://git.outfoxxed.me/outfoxxed/quickshell";
+		    inputs.nixpkgs.follows = "nixpkgs";
+		};
+		nix-flatpak.url = "github:gmodena/nix-flatpak/?ref=latest";
 	};
 
     outputs = {
@@ -28,7 +27,6 @@
         nixpkgs,
         home-manager,
         nix-flatpak,
-        nvf,
         ...
     }@inputs:
 	let
@@ -39,13 +37,6 @@
         ];
 	in
 	{
-        packages."x86_64-linux".default = 
-            (nvf.lib.neovimConfiguration {
-                pkgs = nixpkgs.legacyPackages."x86_64-linux";
-                modules = [
-                    ./modules/nvf/nvf.nix
-                ];
-            }).neovim;
 		nixosConfigurations = {
 			${host} = nixpkgs.lib.nixosSystem {
 				specialArgs = {
@@ -56,11 +47,10 @@
 				};
 				modules = [
 					./hosts/${host}/configuration.nix
-                    inputs.stylix.nixosModules.stylix
-                    inputs.sops-nix.nixosModules.sops
-                    nix-flatpak.nixosModules.nix-flatpak
-                    home-manager.nixosModules.home-manager
-		    nvf.nixosModules.default
+					inputs.stylix.nixosModules.stylix
+					inputs.sops-nix.nixosModules.sops
+					nix-flatpak.nixosModules.nix-flatpak
+					home-manager.nixosModules.home-manager
 						{
 							home-manager.extraSpecialArgs = {
 								inherit inputs;
