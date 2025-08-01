@@ -60,6 +60,7 @@
                     inputs.sops-nix.nixosModules.sops
                     nix-flatpak.nixosModules.nix-flatpak
                     home-manager.nixosModules.home-manager
+		    nvf.nixosModules.default
 						{
 							home-manager.extraSpecialArgs = {
 								inherit inputs;
