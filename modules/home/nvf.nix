@@ -129,7 +129,10 @@
                     enableTreesitter = true;
 
                     nix.enable = true;
-                    python.enable = true;
+                    python = {
+                        enable = true;
+                        dap.enable = true;
+                    };
                 };
 
                 lsp = {
