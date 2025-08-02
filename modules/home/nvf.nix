@@ -132,6 +132,11 @@
                     python = {
                         enable = true;
                         dap.enable = true;
+                        treesitter.enable = true;
+                        format = {
+                            enable = true;
+                            type = "ruff";
+                        };
                     };
                 };
 
