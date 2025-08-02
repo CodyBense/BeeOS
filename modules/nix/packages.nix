@@ -41,7 +41,7 @@
         networkmanager
         networkmanagerapplet
         nh
-        orca-slicer
+        # orca-slicer
         pavucontrol
         power-profiles-daemon
         psmisc
