@@ -27,6 +27,7 @@
                 "4." = "cd ../../../..";
                 py = "python3";
                 lg = "lazygit";
+                zj = "zellij";
             };
             initExtra = ''
                 export PATH=$PATH:$HOME/go/bin
