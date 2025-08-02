@@ -15,6 +15,7 @@
       ../../modules/nix/fonts.nix
       ../../modules/nix/kanata.nix
       ../../modules/nix/samba.nix
+      ../../modules/home/nvf.nix
       # ../../modules/nix/stylix.nix
     ];
 
