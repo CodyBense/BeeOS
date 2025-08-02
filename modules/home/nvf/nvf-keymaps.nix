@@ -2,7 +2,9 @@
 
 {
     programs.nvf = {
-        # enable = true;
+        globals = {
+            mapleader = " ";
+        };
         settings = {
             vim = {
                 keymaps = [
