@@ -2,11 +2,11 @@
 
 {
     programs.nvf = {
-        globals = {
-            mapleader = " ";
-        };
         settings = {
             vim = {
+                globals = {
+                    mapleader = " ";
+                };
                 keymaps = [
                     { # goes to tree explorer
                         key = "<leader>pv";
