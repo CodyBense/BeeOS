@@ -142,6 +142,10 @@
 
                 lsp = {
                     enable = true;
+                    mappings = {
+                        goToDefinition = "<leader>gd";
+                        goToDeclaration = "<leader>gD";
+                    };
                     trouble = {
                         enable = true;
                         mappings = {
