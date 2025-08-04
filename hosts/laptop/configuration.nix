@@ -11,7 +11,6 @@
       ../../modules/nix/packages.nix
       ../../modules/nix/code_bundle.nix
       ../../modules/nix/systemd.nix
-      ../../modules/nix/systemd.nix
       ../../modules/nix/fonts.nix
       ../../modules/nix/kanata.nix
       ../../modules/nix/samba.nix
