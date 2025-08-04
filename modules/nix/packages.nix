@@ -60,6 +60,7 @@
         tmux
         tree
         unzip
+        uv
         vesktop
         vlc
         waybar
