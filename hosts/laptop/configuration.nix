@@ -44,6 +44,7 @@
       enable = true;
       alsa.enable = true;
       alsa.support32Bit = true;
+      audio.enable = true;
       pulse.enable = true;
       jack.enable = true;
       extraConfig.pipewire."92-low-latency" = {
