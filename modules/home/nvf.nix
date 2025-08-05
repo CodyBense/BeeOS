@@ -128,7 +128,12 @@
                 languages = {
                     enableTreesitter = true;
 
-                    nix.enable = true;
+                    nix = {
+                        enable = true;
+                        format.enable = true;
+                        lsp.enable = true;
+                        treesitter.enable = true;
+                    };
                     python = {
                         enable = true;
                         dap.enable = true;
@@ -137,6 +142,12 @@
                             enable = true;
                             type = "ruff";
                         };
+                    };
+                    bash = {
+                        enable = true;
+                        format.enable = true;
+                        lsp.enable = true;
+                        treesitter.enable = true;
                     };
                 };
 
