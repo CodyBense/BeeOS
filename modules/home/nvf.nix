@@ -42,14 +42,14 @@
                     mapleader = " ";
                 };
                 keymaps = [
-                    { # goes to tree explorer
+                    # { # goes to tree explorer
+                        # key = "<leader>pv";
+                        # mode = "n";
+                        # silent = true;
+                        # action = "<cmd>Ex<CR>";
+                    # }
+                    {
                         key = "<leader>pv";
-                        mode = "n";
-                        silent = true;
-                        action = "<cmd>Ex<CR>";
-                    }
-                    { # Opens Oil
-                        key = "=";
                         mode = "n";
                         silent = true;
                         action = "<cmd>Oil<CR>";
@@ -212,6 +212,8 @@
                 utility = {
                     oil-nvim = {
                         enable = true;
+                        setupOpts = {
+                        };
                     };
                 };
             };
