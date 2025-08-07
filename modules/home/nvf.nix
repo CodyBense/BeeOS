@@ -217,18 +217,14 @@
                     };
                 };
 
-                notes = {
-                    obsidian = {
-                        enable = true;
-                        setupOpts = {
-                            completion.nvim-cmp = true;
-                            daily_notes = {
-                                date_format = "%YYYY%MM%DD";
-                                folder = "/home/codybense/Documents/Obsidian/daily_notes";
-                            };
-                        };
-                    };
-                };
+                # notes = {
+                #     obsidian = {
+                #         enable = true;
+                #         setupOpts = {
+                #             completion.nvim-cmp = true;
+                #         };
+                #     };
+                # };
             };
         };
     };
