@@ -41,6 +41,7 @@
         networkmanager
         networkmanagerapplet
         nh
+        obsidian
         # orca-slicer
         pavucontrol
         power-profiles-daemon
