@@ -48,6 +48,12 @@
                         silent = true;
                         action = "<cmd>Ex<CR>";
                     }
+                    { # Opens Oil
+                        key = "=";
+                        mode = "n";
+                        silent = true;
+                        action = "<cmd>Oil<CR>";
+                    }
                     { # moves selected lines and autoindents
                         key = "J";
                         mode = "v";
@@ -200,6 +206,12 @@
                                 enable = true;
                             };
                         };
+                    };
+                };
+
+                utility = {
+                    oil-nvim = {
+                        enable = true;
                     };
                 };
             };
