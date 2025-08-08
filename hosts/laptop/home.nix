@@ -16,7 +16,7 @@
         ../../modules/home/rofi.nix
         ../../modules/home/zellij.nix
         ../../modules/home/waybar.nix
-        ../../modules/home/obsidian.nix
+        # ../../modules/home/obsidian.nix
         # ../../modules/home/nvf.nix
         # ../../modules/home/starship.nix
         # ../../modules/home/hyprpanel.nix
