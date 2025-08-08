@@ -217,6 +217,7 @@
                     "$mainMod SHIFT, m, exec, hyprland-monitor-toggle"
                     "$mainMod, R, exec, restart-waybar"
                     "$mainMod, N, exec, swaync-client -t -sw"
+                    "$mainMod SHIFT, N, exec, rofi-notes"
                     ];
 
             bindm = [
