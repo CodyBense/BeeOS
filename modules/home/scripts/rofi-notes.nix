@@ -5,7 +5,7 @@ pkgs.writeShellScriptBin "rofi-notes" ''
     choice="$(printf "Pull\nPush" | rofi -dmenu)" || exit 0
 
     case $choice in 
-        Pull) rsync -vr cody@192.168.1.243:/data/Notes $HOME/Documents/Notes;;
+        Pull) rsync -vr cody@192.168.1.243:/data/Notes $HOME/Documents;;
         Push) rsync -vr $HOME/Documents/Notes cody@192.168.1.243:/data;;
     esac
     
