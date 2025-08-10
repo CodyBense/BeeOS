@@ -2,6 +2,8 @@
 
 {
     environment.systemPackages = with pkgs; [
+        alsa-firmware
+        alsa-utils
         arduino-cli
         arduino-ide
         bat
@@ -30,6 +32,7 @@
         hyprpicker
         hyprsunset
         rose-pine-hyprcursor
+        inxi
         kanata
         killall
         kitty
@@ -52,6 +55,7 @@
         ripgrep
         rofi-wayland
         rsync
+        sof-firmware
         spotify
         starship
         swayimg
