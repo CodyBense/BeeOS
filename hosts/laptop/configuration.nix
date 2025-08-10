@@ -5,191 +5,173 @@
 { config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      ./hardware-configuration.nix
-      ../../modules/nix/packages.nix
-      ../../modules/nix/code_bundle.nix
-      # ../../modules/nix/systemd.nix
-      ../../modules/nix/fonts.nix
-      ../../modules/nix/kanata.nix
-      ../../modules/nix/samba.nix
-      ../../modules/home/nvf.nix
-      # ../../modules/nix/stylix.nix
-    ];
+    imports =
+        [ # Include the results of the hardware scan.
+            ./hardware-configuration.nix
+            ../../modules/nix/packages.nix
+            ../../modules/nix/code_bundle.nix
+            # ../../modules/nix/systemd.nix
+            ../../modules/nix/fonts.nix
+            ../../modules/nix/audio.nix
+            ../../modules/nix/kanata.nix
+            ../../modules/nix/samba.nix
+            ../../modules/home/nvf.nix
+            # ../../modules/nix/stylix.nix
+        ];
 
-  # Bootloader.
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  boot.kernelPackages = pkgs.linuxPackages_latest;
+    # Bootloader.
+    boot.loader.systemd-boot.enable = true;
+    boot.loader.efi.canTouchEfiVariables = true;
+    boot.kernelPackages = pkgs.linuxPackages_latest;
 
-  networking.hostName = "laptop"; # Define your hostname.
-  # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
+    networking.hostName = "laptop"; # Define your hostname.
+    # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
-  # Configure network proxy if necessary
-  # networking.proxy.default = "http://user:password@proxy:port/";
-  # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
+    # Configure network proxy if necessary
+    # networking.proxy.default = "http://user:password@proxy:port/";
+    # networking.proxy.noProxy = "127.0.0.1,localhost,internal.domain";
 
-  # Enable networking
-  networking.networkmanager.enable = true;
+    # Enable networking
+    networking.networkmanager.enable = true;
 
-  # Enable bluetooth
-  hardware.bluetooth.enable = true;
+    # Enable bluetooth
+    hardware.bluetooth = {
+        enable = true;
+        powerOnBoot = true;
+    };
 
-  hardware.enableAllFirmware = true;
+    hardware.enableAllFirmware = true;
 
-  # Enable Pipewire
-  security.rtkit.enable = true;
-  services.pipewire = {
-      enable = true;
-      alsa.enable = true;
-      alsa.support32Bit = true;
-      audio.enable = true;
-      pulse.enable = true;
-      jack.enable = true;
-      extraConfig.pipewire."92-low-latency" = {
-          "context.properties" = {
-              "default.clock.rate" = 48000;
-              "default.clock.quantum" = 256;
-              "default.clock.min-quantum" = 256;
-              "default.clock.max-quantum" = 256;
-          };
-      };
-      extraConfig.pipewire-pulse."92-low-latency" = {
-          context.modules = [
-            {
-                name = "libpipewire-module-protocol-pulse";
-                args = {
-                  pulse.min.req = "256/48000";
-                  pulse.default.req = "256/48000";
-                  pulse.max.req = "256/48000";
-                  pulse.min.quantum = "256/48000";
-                  pulse.max.quantum = "256/48000";
-                };
-            }
-          ];
-      };
-  };
-  
-  # Enable qmk
-  hardware.keyboard.qmk.enable = true;
+    # Audio
+    # services.pulseaudio.enable =false;
+    # security.rtkit.enable = true;
+    # services.pipewire = {
+    #     enable = true;
+    #     alsa.enable = true;
+    #     alsa.support32Bit = true;
+    #     pulse.enable = true;
+    #     jack.enable = true;
+    # };
 
-  # Set your time zone.
-  time.timeZone = "America/New_York";
+    # Enable qmk
+    hardware.keyboard.qmk.enable = true;
 
-  # Select internationalisation properties.
-  i18n.defaultLocale = "en_US.UTF-8";
+    # Set your time zone.
+    time.timeZone = "America/New_York";
 
-  i18n.extraLocaleSettings = {
-    LC_ADDRESS = "en_US.UTF-8";
-    LC_IDENTIFICATION = "en_US.UTF-8";
-    LC_MEASUREMENT = "en_US.UTF-8";
-    LC_MONETARY = "en_US.UTF-8";
-    LC_NAME = "en_US.UTF-8";
-    LC_NUMERIC = "en_US.UTF-8";
-    LC_PAPER = "en_US.UTF-8";
-    LC_TELEPHONE = "en_US.UTF-8";
-    LC_TIME = "en_US.UTF-8";
-  };
+    # Select internationalisation properties.
+    i18n.defaultLocale = "en_US.UTF-8";
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+    i18n.extraLocaleSettings = {
+        LC_ADDRESS = "en_US.UTF-8";
+        LC_IDENTIFICATION = "en_US.UTF-8";
+        LC_MEASUREMENT = "en_US.UTF-8";
+        LC_MONETARY = "en_US.UTF-8";
+        LC_NAME = "en_US.UTF-8";
+        LC_NUMERIC = "en_US.UTF-8";
+        LC_PAPER = "en_US.UTF-8";
+        LC_TELEPHONE = "en_US.UTF-8";
+        LC_TIME = "en_US.UTF-8";
+    };
 
-  # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.codybense = {
-    isNormalUser = true;
-    description = "codybense";
-    extraGroups = [ "networkmanager" "wheel" "audio"];
-    packages = with pkgs; [];
-  };
+    # Configure keymap in X11
+    services.xserver.xkb = {
+        layout = "us";
+        variant = "";
+    };
 
-  # Allow unfree packages
-  nixpkgs.config.allowUnfree = true;
+    # Define a user account. Don't forget to set a password with ‘passwd’.
+    users.users.codybense = {
+        isNormalUser = true;
+        description = "codybense";
+        extraGroups = [ "networkmanager" "wheel" "audio"];
+        packages = with pkgs; [];
+    };
 
-  environment.sessionVariables = {
-      NH_FLAKE = "/home/codybense/BeeOS";
-  };
+    # Allow unfree packages
+    nixpkgs.config.allowUnfree = true;
 
-  environment.variables.EDITOR = "nvim";
+    environment.sessionVariables = {
+        NH_FLAKE = "/home/codybense/BeeOS";
+    };
 
-  # Enables nix flakes
+    environment.variables.EDITOR = "nvim";
 
-  # Garbage collection
-  nix = {
-      settings = {
-          auto-optimise-store = true;
-          experimental-features = [ "nix-command" "flakes" ];
-      };
-      gc = {
-          automatic = true;
-          dates = "weekly";
-          options = "--delete-older-than 7d";
-      };
-  };
+    # Enables nix flakes
 
-  # Enables Hyprland
-  programs.hyprland = {
-      enable = true;
-      withUWSM = true;
-  };
+    # Garbage collection
+    nix = {
+        settings = {
+            auto-optimise-store = true;
+            experimental-features = [ "nix-command" "flakes" ];
+        };
+        gc = {
+            automatic = true;
+            dates = "weekly";
+            options = "--delete-older-than 7d";
+        };
+    };
 
-  # Enables Sway
-  programs.sway = {
-      enable = true;
-      wrapperFeatures.gtk = true;
-  };
+    # Enables Hyprland
+    programs.hyprland = {
+        enable = true;
+        withUWSM = true;
+    };
 
-# starts Hyprland
-  programs.uwsm.enable = true;
-  programs.uwsm.waylandCompositors = {
-      hyprland = {
-          prettyName = "Hyprland";
-          comment = "Hyprland compositor managed by UWSM";
-          binPath = "/run/current-system/sw/bin/Hyprland";
-      };
-  };
+    # Enables Sway
+    programs.sway = {
+        enable = true;
+        wrapperFeatures.gtk = true;
+    };
+
+    # starts Hyprland
+    programs.uwsm.enable = true;
+    programs.uwsm.waylandCompositors = {
+        hyprland = {
+            prettyName = "Hyprland";
+            comment = "Hyprland compositor managed by UWSM";
+            binPath = "/run/current-system/sw/bin/Hyprland";
+        };
+    };
 
 
-  # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
-  # programs.mtr.enable = true;
-  # programs.gnupg.agent = {
-  #   enable = true;
-  #   enableSSHSupport = true;
-  # };
+    # Some programs need SUID wrappers, can be configured further or are
+    # started in user sessions.
+    # programs.mtr.enable = true;
+    # programs.gnupg.agent = {
+    #   enable = true;
+    #   enableSSHSupport = true;
+    # };
 
-  # List services that you want to enable:
+    # List services that you want to enable:
 
-  # Flatpak
-  services.flatpak.enable = true;
-  services.flatpak.update.onActivation = true;
-  # services.flatpak.update.auto = {
-  #     enable = true;
-  #     onCalendar = "weekly";
-  # };
+    # Flatpak
+    services.flatpak.enable = true;
+    services.flatpak.update.onActivation = true;
+    # services.flatpak.update.auto = {
+    #     enable = true;
+    #     onCalendar = "weekly";
+    # };
 
-  # Power-profiles-daemon
-  services.power-profiles-daemon.enable = true;
+    # Power-profiles-daemon
+    services.power-profiles-daemon.enable = true;
 
-  # Enable the OpenSSH daemon.
-  services.openssh.enable = true;
+    # Enable the OpenSSH daemon.
+    services.openssh.enable = true;
 
-  # Open ports in the firewall.
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
-  # Or disable the firewall altogether.
-  # networking.firewall.enable = false;
+    # Open ports in the firewall.
+    # networking.firewall.allowedTCPPorts = [ ... ];
+    # networking.firewall.allowedUDPPorts = [ ... ];
+    # Or disable the firewall altogether.
+    # networking.firewall.enable = false;
 
-  # This value determines the NixOS release from which the default
-  # settings for stateful data, like file locations and database versions
-  # on your system were taken. It‘s perfectly fine and recommended to leave
-  # this value at the release version of the first install of this system.
-  # Before changing this value read the documentation for this option
-  # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
+    # This value determines the NixOS release from which the default
+    # settings for stateful data, like file locations and database versions
+    # on your system were taken. It‘s perfectly fine and recommended to leave
+    # this value at the release version of the first install of this system.
+    # Before changing this value read the documentation for this option
+    # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
 
-  system.stateVersion = "25.05"; # Did you read the comment?
+    system.stateVersion = "25.05"; # Did you read the comment?
 
 }
