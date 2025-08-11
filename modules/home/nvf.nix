@@ -217,6 +217,13 @@
                     };
                 };
 
+                mini.icons.enable = true;
+
+                visuals.nvim-web-devicons = {
+                    enable = true;
+                    setupOpts.color_icons = true;
+                };
+
                 # notes = {
                 #     obsidian = {
                 #         enable = true;
