@@ -24,7 +24,7 @@
     boot.loader.efi.canTouchEfiVariables = true;
     boot.kernelPackages = pkgs.linuxPackages_latest;
 
-    networking.hostName = "laptop"; # Define your hostname.
+    networking.hostName = "Revan"; # Define your hostname.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
     # Configure network proxy if necessary

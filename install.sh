@@ -7,10 +7,10 @@ fi
 
 echo "Building from config"
 
-read -pr "Enter target host name, defaults to laptop if none entered: " hostName
+read -pr "Enter target host name, defaults to Revan if none entered: " hostName
 
 if [ -z "$hostName" ]; then
-    hostname=laptop
+    hostname=Revan
 fi
 
 if [ ! -d "$HOME"/BeeOS/hosts/"$hostName" ]; then
