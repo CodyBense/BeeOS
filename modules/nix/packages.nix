@@ -52,7 +52,6 @@
         pyenv
         protonmail-desktop
         qmk
-        inputs.quickshell.packages.${pkgs.system}.default
         ripgrep
         rofi-wayland
         rsync
