@@ -1,4 +1,4 @@
-{ ... }:
+{ pkgs, ... }:
 
 {
     programs.obsidian = {
@@ -13,6 +13,10 @@
             appearance = {
                 baseColorScheme = "dark";
             };
+
+            themes = [
+                (pkgs.callPackage ./Catppuccin {})
+            ];
 
             communityPlugins = [
                 
