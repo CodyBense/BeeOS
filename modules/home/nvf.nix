@@ -155,6 +155,20 @@
                         lsp.enable = true;
                         treesitter.enable = true;
                     };
+                    markdown = {
+                        enable = true;
+                        extensions = {
+                            render-markdown-nvim = {
+                                enable = true;
+                            };
+                        };
+                    };
+                    clang = {
+                        enable = true;
+                        dap.enable = true;
+                        lsp.enable = true;
+                        treesitter.enable = true;
+                    };
                 };
 
                 lsp = {
@@ -198,16 +212,6 @@
                     };
                 };
 
-                languages = {
-                    markdown = {
-                        enable = true;
-                        extensions = {
-                            render-markdown-nvim = {
-                                enable = true;
-                            };
-                        };
-                    };
-                };
 
                 utility = {
                     oil-nvim = {
