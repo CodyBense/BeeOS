@@ -61,6 +61,7 @@
         swayimg
         swaynotificationcenter
         swww
+        tailscale
         tlp
         tmux
         tree
