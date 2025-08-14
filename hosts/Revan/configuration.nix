@@ -15,7 +15,8 @@
             ../../modules/nix/audio.nix
             ../../modules/nix/kanata.nix
             ../../modules/nix/samba.nix
-            ../../modules/home/nvf.nix
+            ../../modules/nix/nvf.nix
+            ../../modules/nix/programs.nix
             # ../../modules/nix/stylix.nix
         ];
 
