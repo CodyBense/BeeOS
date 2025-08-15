@@ -35,14 +35,6 @@
     # Enable networking
     networking.networkmanager.enable = true;
 
-    # Enable bluetooth
-    hardware.bluetooth = {
-        enable = true;
-        powerOnBoot = true;
-    };
-
-    hardware.enableAllFirmware = true;
-
     # Audio
     # services.pulseaudio.enable =false;
     # security.rtkit.enable = true;
@@ -53,9 +45,6 @@
     #     pulse.enable = true;
     #     jack.enable = true;
     # };
-
-    # Enable qmk
-    hardware.keyboard.qmk.enable = true;
 
     # Set your time zone.
     time.timeZone = "America/New_York";
