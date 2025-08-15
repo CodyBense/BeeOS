@@ -5,6 +5,7 @@
         package = pkgs.waybar;
         settings = [{
             position = "top";
+            # modules-left = [ "hyprland/window" "hyprland/workspaces" ];
             modules-left = [ "hyprland/workspaces" ];
             modules-center = [ "clock" ];
             modules-right = [ "pulseaudio" "network" "backlight" "battery" "power-profiles-daemon" "custom/notification" ];
