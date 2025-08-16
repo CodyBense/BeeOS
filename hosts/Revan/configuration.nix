@@ -17,23 +17,10 @@
             ../../modules/nix/nvf.nix
             ../../modules/nix/de.nix
             ../../modules/nix/hardware.nix
+            ../../modules/nix/boot.nix
             # ../../modules/nix/systemd.nix
             # ../../modules/nix/stylix.nix
         ];
-
-    # Bootloader.
-    boot.loader.systemd-boot.enable = true;
-    boot.loader.efi.canTouchEfiVariables = true;
-    boot.kernelPackages = pkgs.linuxPackages_latest;
-    # boot.extraModprobeConfig = ''
-    #     options snd-hda-intel dmic_detect=0
-    # '';
-    # boot.extraModprobeConfig = ''
-    #     options snd-intel-dspcfg dsp_driver=1
-    # '';
-    boot.extraModprobeConfig = ''
-        options snd_hda_intel index=1,0
-    '';
 
     networking.hostName = "Revan"; # Define your hostname.
     # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
