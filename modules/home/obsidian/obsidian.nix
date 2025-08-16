@@ -15,7 +15,7 @@
             };
 
             themes = [
-                (pkgs.callPackage ./Catppuccin {})
+                # (pkgs.callPackage ./Catppuccin {})
             ];
 
             communityPlugins = [
@@ -24,13 +24,13 @@
 
         };
 
-        vaults = {
-            "Documents/Obsidian/daily_notes" = {
-                enable = true;
-            };
-            "Documents/Obsidian/projects" = {
-                enable = true;
-            };
-        };
+        # vaults = {
+        #     "Documents/Obsidian/daily_notes" = {
+        #         enable = true;
+        #     };
+        #     "Documents/Obsidian/projects" = {
+        #         enable = true;
+        #     };
+        # };
     };
 }

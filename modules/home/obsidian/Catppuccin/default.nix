@@ -8,7 +8,7 @@ pkgs.stdenv.mkDerivation rec {
         owner = "catppuccin";
         repo = "obsidian";
         rev = version;
-        sha256 = pkgs.lib.fakeHash;
+        sha256 = "sha256-9fSFj9Tzc2aN9zpG5CyDMngVcwYEppf7MF1ZPUWFyz4=";
     };
 
     phases = [ "installPhase" ];
