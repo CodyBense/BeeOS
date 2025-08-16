@@ -28,8 +28,11 @@
     # boot.extraModprobeConfig = ''
     #     options snd-hda-intel dmic_detect=0
     # '';
+    # boot.extraModprobeConfig = ''
+    #     options snd-intel-dspcfg dsp_driver=1
+    # '';
     boot.extraModprobeConfig = ''
-        options snd-intel-dspcfg dsp_driver=1
+        options snd_hda_intel index=1,0
     '';
 
     networking.hostName = "Revan"; # Define your hostname.
