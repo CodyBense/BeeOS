@@ -34,6 +34,7 @@
         rose-pine-hyprcursor
         inxi
         kanata
+        kicad
         killall
         kitty
         lazygit
