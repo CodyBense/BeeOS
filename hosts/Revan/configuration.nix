@@ -16,7 +16,9 @@
             ../../modules/nix/nvf.nix
             ../../modules/nix/packages.nix
             ../../modules/nix/samba.nix
+            ../../modules/nix/services.nix
             # ../../modules/nix/stylix.nix
+            ../../modules/nix/system.nix
             # ../../modules/nix/systemd.nix
         ];
 
@@ -61,53 +63,6 @@
 
     environment.variables.EDITOR = "nvim";
 
-    # Enables nix flakes
-
-    # Garbage collection
-    nix = {
-        settings = {
-            auto-optimise-store = true;
-            experimental-features = [ "nix-command" "flakes" ];
-        };
-        gc = {
-            automatic = true;
-            dates = "weekly";
-            options = "--delete-older-than 7d";
-        };
-    };
-
-    # # Enable cachix for Hyprland
-    # nix.settings = {
-    #     substituters = ["https://hyprland.cachix.org"];
-    #     trusted-substituters = ["https://hyprland.cachix.org"];
-    #     trusted-public-keys = ["hyprland.cachix.org-1:a7pgxzMz7+chwVL3/pzj6jIBMioiJM7ypFP8PwtkuGc="];
-    # };   
-    #
-    # # Enables Hyprland
-    # programs.hyprland = {
-    #     enable = true;
-    #     # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    #     # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
-    #     withUWSM = true;
-    # };
-    #
-    # # Enables Sway
-    # programs.sway = {
-    #     enable = true;
-    #     wrapperFeatures.gtk = true;
-    # };
-    #
-    # # starts Hyprland
-    # programs.uwsm.enable = true;
-    # programs.uwsm.waylandCompositors = {
-    #     hyprland = {
-    #         prettyName = "Hyprland";
-    #         comment = "Hyprland compositor managed by UWSM";
-    #         binPath = "/run/current-system/sw/bin/Hyprland";
-    #     };
-    # };
-
-
     # Some programs need SUID wrappers, can be configured further or are
     # started in user sessions.
     # programs.mtr.enable = true;
@@ -115,25 +70,6 @@
     #   enable = true;
     #   enableSSHSupport = true;
     # };
-
-    # List services that you want to enable:
-
-    # Flatpak
-    services.flatpak.enable = true;
-    services.flatpak.update.onActivation = true;
-    # services.flatpak.update.auto = {
-    #     enable = true;
-    #     onCalendar = "weekly";
-    # };
-
-    # Power-profiles-daemon
-    services.power-profiles-daemon.enable = true;
-
-    # Enable the OpenSSH daemon.
-    services.openssh.enable = true;
-
-    # Tailscale
-    services.tailscale.enable = true;
 
     system.stateVersion = "25.05"; # Did you read the comment?
 }
