@@ -217,6 +217,14 @@
                     oil-nvim = {
                         enable = true;
                         setupOpts = {
+                            mappings = [
+                                {
+                                    key = "o.";
+                                    mode = "n";
+                                    silent = true;
+                                    action = "actions.toggle_hidden";
+                                }
+                            ];
                         };
                     };
                 };
