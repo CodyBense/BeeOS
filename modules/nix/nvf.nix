@@ -219,7 +219,7 @@
                         setupOpts = {
                             mappings = [
                                 {
-                                    key = "o.";
+                                    key = "g.";
                                     mode = "n";
                                     silent = true;
                                     action = "actions.toggle_hidden";
