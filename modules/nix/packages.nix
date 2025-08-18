@@ -56,7 +56,7 @@
         ripgrep
         rofi-wayland
         rsync
-        sof-firmware
+        # sof-firmware
         spotify
         starship
         swayimg
