@@ -50,7 +50,7 @@
     users.users.codybense = {
         isNormalUser = true;
         description = "codybense";
-        extraGroups = [ "networkmanager" "wheel" "audio"];
+        extraGroups = [ "networkmanager" "wheel" "audio" "pulse"];
         packages = with pkgs; [];
     };
 
