@@ -3,7 +3,8 @@
 {
     boot.loader.systemd-boot.enable = true;
     boot.loader.efi.canTouchEfiVariables = true;
-    boot.kernelPackages = pkgs.linuxPackages_latest;
+
+    #boot.kernelPackages = pkgs.linuxPackages_latest;
     # boot.extraModprobeConfig = ''
     #     options snd-hda-intel dmic_detect=0
     # '';
