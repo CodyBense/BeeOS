@@ -4,7 +4,7 @@
     imports =
         [ # Include the results of the hardware scan.
             ./hardware-configuration.nix
-            ../../modules/nix/audio.nix
+            #../../modules/nix/audio.nix
             ../../modules/nix/boot.nix
             ../../modules/nix/code_bundle.nix
             ../../modules/nix/de.nix
@@ -50,7 +50,8 @@
     users.users.codybense = {
         isNormalUser = true;
         description = "codybense";
-        extraGroups = [ "networkmanager" "wheel" "audio" "pulse"];
+        extraGroups = [ "networkmanager" "wheel" "audio" ];
+        # extraGroups = [ "networkmanager" "wheel" ];
         packages = with pkgs; [];
     };
 
