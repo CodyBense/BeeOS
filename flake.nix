@@ -77,18 +77,15 @@
                 };
             };
             nixosConfigurations = {
-                "Test" = nixpkgs.lib.nixosSystem {
+                "Pikachu" = nixpkgs.lib.nixosSystem {
                     specialArgs = {
                         inherit system;
                         inherit inputs;
                         inherit username;
                     };
                     modules = [
-                        ./hosts/Revan/configuration.nix
-                        inputs.stylix.nixosModules.stylix
+                        ./hosts/Pikachu/configuration.nix
                         inputs.sops-nix.nixosModules.sops
-                        nix-flatpak.nixosModules.nix-flatpak
-                        home-manager.nixosModules.home-manager
                         nvf.nixosModules.default
                         {
                             home-manager.extraSpecialArgs = {
@@ -98,7 +95,7 @@
                             home-manager.useGlobalPkgs = true;
                             home-manager.useUserPackages = true;
                             home-manager.backupFileExtension = "backup";
-                            home-manager.users.${username} = ./hosts/Test/home.nix;
+                            home-manager.users.${username} = ./hosts/Pikachu/home.nix;
                         }
                     ];
                 };
