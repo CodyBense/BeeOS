@@ -56,6 +56,7 @@
   git
   github-cli
   lazygit
+  tmux
   yazi
   ];
 
