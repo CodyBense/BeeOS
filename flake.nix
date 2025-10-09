@@ -22,6 +22,10 @@
             url = "github:NotAShelf/nvf";
             inputs.nixpkgs.follows = "nixpkgs";
         };
+	neovim-nightly-overlay = {
+		url = "github:nix-community/neovim-nightly-overlay";
+		inputs.nixpkgs.follows = "nixpkgs";
+	};
     };
 
     outputs = {
@@ -53,8 +57,8 @@
                         inputs.stylix.nixosModules.stylix
                         inputs.sops-nix.nixosModules.sops
                         nix-flatpak.nixosModules.nix-flatpak
-                        home-manager.nixosModules.home-manager
                         nvf.nixosModules.default
+                        home-manager.nixosModules.home-manager
                         {
                             home-manager.extraSpecialArgs = {
                                 inherit inputs;
@@ -86,16 +90,14 @@
                     modules = [
                         ./hosts/Pikachu/configuration.nix
                         inputs.sops-nix.nixosModules.sops
-                        nvf.nixosModules.default
+                        home-manager.nixosModules.home-manager
                         {
-                            home-manager.extraSpecialArgs = {
-                                inherit inputs;
-                                inherit username;
-                            };
-                            home-manager.useGlobalPkgs = true;
-                            home-manager.useUserPackages = true;
-                            home-manager.backupFileExtension = "backup";
-                            home-manager.users.${username} = ./hosts/Pikachu/home.nix;
+				home-manager = {
+				useGlobalPkgs = true;
+				useUserPackages = true;
+				users.codybense = import ./hosts/Pikachu/home.nix;
+				backupFileExtension = "backup";
+				};
                         }
                     ];
                 };
