@@ -18,7 +18,7 @@ if [ ! -d "$HOME"/BeeOS/hosts/"$hostName" ]; then
     mkdir -p "$HOME"/BeeOS/hosts/"$hostName"
     cat /etc/nixos/configuration.nix > "$HOME"/BeeOS/hosts/"$hostName"/configuration.nix
     cat /etc/nixos/hardware-configuration.nix > "$HOME"/BeeOS/hosts/"$hostName"/hardware-configuration.nix
-    cp hosts/Test/home.nix host/"$hostName"
+    cp hosts/Test/home.nix host/"$hostName"/
 fi
 
 cat /etc/nixos/hardware-configuration.nix > hosts/"$hostName"/hardware-configuration.nix
