@@ -87,16 +87,16 @@
                         ./hosts/Pikachu/configuration.nix
                         inputs.sops-nix.nixosModules.sops
                         nvf.nixosModules.default
-                        # {
-                        #     home-manager.extraSpecialArgs = {
-                        #         inherit inputs;
-                        #         inherit username;
-                        #     };
-                        #     home-manager.useGlobalPkgs = true;
-                        #     home-manager.useUserPackages = true;
-                        #     home-manager.backupFileExtension = "backup";
-                        #     home-manager.users.${username} = ./hosts/Pikachu/home.nix;
-                        # }
+                        {
+                            home-manager.extraSpecialArgs = {
+                                inherit inputs;
+                                inherit username;
+                            };
+                            home-manager.useGlobalPkgs = true;
+                            home-manager.useUserPackages = true;
+                            home-manager.backupFileExtension = "backup";
+                            home-manager.users.${username} = ./hosts/Pikachu/home.nix;
+                        }
                     ];
                 };
             };
