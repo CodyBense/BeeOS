@@ -16,9 +16,9 @@ fi
 if [ ! -d "$HOME"/BeeOS/hosts/"$hostName" ]; then
     echo "Making dir "$hostName" at "$HOME"/BeeOS/hosts"
     mkdir -p "$HOME"/BeeOS/hosts/"$hostName"
-    cat /etc/nixos/configuration.nix >> "$HOME"/BeeOS/hosts/"$hostName"
-    cat /etc/nixos/hardware-configuration.nix >> "$HOME"/BeeOS/hosts/"$hostName"
-    cp hosts/Test/home.nix host/"$hostName"/
+    cat /etc/nixos/configuration.nix >> "$HOME"/BeeOS/hosts/"$hostName"/configuration.nix
+    cat /etc/nixos/hardware-configuration.nix >> "$HOME"/BeeOS/hosts/"$hostName"/hardware-configuration.nix
+    cp hosts/Test/home.nix host/"$hostName"
 fi
 
 cat /etc/nixos/hardware-configuration.nix >> hosts/"$hostName"/hardware-configuration.nix
