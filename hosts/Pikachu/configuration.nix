@@ -69,6 +69,7 @@
   #  wget
   neovim
   git
+  github-cli
   lazygit
   ];
 
