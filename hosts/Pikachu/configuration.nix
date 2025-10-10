@@ -5,6 +5,7 @@
     [ 
       ./hardware-configuration.nix
       ../../modules/nix/docker.nix
+      ../../modules/server/postgres.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -53,13 +54,18 @@
 	package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
   environment.systemPackages = with pkgs; [
+  cargo
   direnv
   fzf
+  gcc
   git
   github-cli
   lazygit
+  rustc
+  rustup
   starship
   tmux
+  unzip
   yazi
   zoxide
   ];
