@@ -53,11 +53,15 @@
 	package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
   environment.systemPackages = with pkgs; [
+  direnv
+  fzf
   git
   github-cli
   lazygit
+  starship
   tmux
   yazi
+  zoxide
   ];
 
   # programs.mtr.enable = true;
