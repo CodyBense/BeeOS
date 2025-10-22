@@ -6,6 +6,7 @@
       ./hardware-configuration.nix
       ../../modules/nix/docker.nix
       ../../modules/server/postgres.nix
+      ../../modules/server/packages.nix
     ];
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
@@ -49,25 +50,7 @@
 
   nixpkgs.config.allowUnfree = true;
 
-  programs.neovim = {
-  	enable = true;
-	package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
-  };
   environment.systemPackages = with pkgs; [
-  cargo
-  direnv
-  fzf
-  gcc
-  git
-  github-cli
-  lazygit
-  rustc
-  rustup
-  starship
-  tmux
-  unzip
-  yazi
-  zoxide
   ];
 
   # programs.mtr.enable = true;
