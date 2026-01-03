@@ -13,35 +13,29 @@ if [ -z "$hostName" ]; then
     hostName=Revan
 fi
 
-if [ ! -d "$HOME"/BeeOS/hosts/"$hostName" ]; then
-    echo "Making dir "$hostName" at "$HOME"/BeeOS/hosts"
+if [ ! -d ${HOME}/BeeOS/hosts/$hostName ]; then
+    echo "Making dir $hostName at $HOME/BeeOS/hosts"
     mkdir -p "$HOME"/BeeOS/hosts/"$hostName"
-    cat /etc/nixos/configuration.nix > "$HOME"/BeeOS/hosts/"$hostName"/configuration.nix
-    cat /etc/nixos/hardware-configuration.nix > "$HOME"/BeeOS/hosts/"$hostName"/hardware-configuration.nix
-    cp hosts/Test/home.nix host/"$hostName"/
+    sudo cat /etc/nixos/configuration.nix > $HOME/BeeOS/hosts/$hostName/configuration.nix
+    sudo cat /etc/nixos/hardware-configuration.nix > $HOME/BeeOS/hosts/$hostName/hardware-configuration.nix
 fi
 
-cat /etc/nixos/hardware-configuration.nix > hosts/"$hostName"/hardware-configuration.nix
+sudo cat /etc/nixos/hardware-configuration.nix > hosts/$hostName/hardware-configuration.nix
 
 sleep 1
 
-echo "Building for "$hostName""
+echo "Building for $hostName"
 
-sudo nixos-rebuild switch --flake .#"$hostName"
+sudo nixos-rebuild switch --flake .#$hostName
 
-# echo "Linking nvim config"
-#
-# cd /home/"$USER"
-#
-# git clone https://github.com/CodyBense/dotfiles.git
-# mkdir .config/nvim
-#
-# ln -s "$HOME"/dotfiles/nvim/.config/nvim "$HOME"/.config/nvim/
+read -p "Do you want to install doom emacs: (y/n) " doom_emacs_install
 
-echo "Installing doom emacs"
+if (( $doom_emacs_install == "y" )); then
+    echo "Installing doom emacs"
 
-git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
-~/.emacs.d/bin/doom install
+    git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+    ~/.emacs.d/bin/doom install
+fi
 
 echo "Creating directories"
 
