@@ -13,9 +13,11 @@ My NixOS config
 ** INSTALL
 
 **** SCRIPT
-+ git clone https://github.com/CodyBense/BeeOS ~/BeeOS
+#+begin_src
+git clone https://github.com/CodyBense/BeeOS ~/BeeOS
+#+end_src
 + Edit hostname in /etc/nixos/configuration.nix
-+ run sudo ./install.sh
++ sudo ./install.sh
 
 **** MANUAL
 + Edit hostname in /etc/nixos/configuration.nix
