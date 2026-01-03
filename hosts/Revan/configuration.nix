@@ -13,7 +13,6 @@
             ../../modules/nix/hardware.nix
             ../../modules/nix/kanata.nix
             ../../modules/nix/networking.nix
-            ../../modules/nix/nvf.nix
             ../../modules/nix/packages.nix
             ../../modules/nix/samba.nix
             ../../modules/nix/services.nix
