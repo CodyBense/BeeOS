@@ -8,12 +8,16 @@
         brightnessctl
         btop
         cifs-utils
+        clang
         cmake
+        coreutils
         kdePackages.dolphin
         direnv
         dmenu
         docker-compose
+        emacs
         fastfetch
+        fd
         firefox
         freecad-wayland
         fzf

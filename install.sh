@@ -37,7 +37,12 @@ sudo nixos-rebuild switch --flake .#"$hostName"
 # mkdir .config/nvim
 #
 # ln -s "$HOME"/dotfiles/nvim/.config/nvim "$HOME"/.config/nvim/
-#
+
+echo "Installing doom emacs"
+
+git clone https://github.com/hlissner/doom-emacs ~/.emacs.d
+~/.emacs.d/bin/doom install
+
 echo "Creating directories"
 
 if [ ! -d "$HOME"/workspaces/github.com/CodyBense ]; then
