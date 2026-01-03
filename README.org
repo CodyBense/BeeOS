@@ -1,0 +1,15 @@
+#+title: Readme
+* *BeeOS*
+
+My NixOS config
+
+** Programs
+
+| Window Manaager | Niri           |
+| Top bar         | Noctalia-shell |
+
+** How to install
+
++ clone repo
++ run sudo ./install.sh
+
