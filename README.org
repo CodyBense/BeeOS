@@ -3,20 +3,21 @@
 
 My NixOS config
 
-** Programs
+** PROGRAMS
 
 | Window Manaager | Niri           |
 | Top bar         | Noctalia-shell |
 | Text editor     | Doom Emacs     |
 | Terminal        | Kitty          |
 
-** How to install
+** INSTALL
 
-**** Using script
-+ clone repo
+**** SCRIPT
++ git clone https://github.com/CodyBense/BeeOS ~/BeeOS
++ Edit hostname in /etc/nixos/configuration.nix
 + run sudo ./install.sh
 
-**** Manual install
+**** MANUAL
 + Edit hostname in /etc/nixos/configuration.nix
   #+begin_src
 git clone https://github.com/CodyBense/BeeOS ~/BeeOS
