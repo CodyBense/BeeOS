@@ -7,9 +7,17 @@ My NixOS config
 
 | Window Manaager | Niri           |
 | Top bar         | Noctalia-shell |
+| Text editor     | Doom Emacs     |
+| Terminal        | Kitty          |
 
 ** How to install
 
+**** Using script
 + clone repo
 + run sudo ./install.sh
 
+**** Manual install
++ Edit hostname in /etc/nixos/configuration.nix
++ cat /etc/nixos/configuration.nix > $HOME/BeeOS/hosts/hostName/configuration.nix
++ cat /etc/nixos/hardware-configuration.nix > $HOME/BeeOS/hosts/hostName/hardware-configuration.nix
++ sudo nixos-rebuild switch --flake .#hostName
