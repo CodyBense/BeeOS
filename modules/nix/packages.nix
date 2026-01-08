@@ -8,8 +8,6 @@
         brightnessctl
         btop
         cifs-utils
-        clang
-        cmake
         coreutils
         kdePackages.dolphin
         direnv
@@ -17,14 +15,11 @@
         docker-compose
         emacs
         fastfetch
-        fd
         firefox
         freecad-wayland
         fzf
-        gcc
         gh
         ghostty
-        git
         grimblast
         home-manager
         hyprcursor
@@ -55,7 +50,6 @@
         pyenv
         protonmail-desktop
         qmk
-        ripgrep
         rofi-wayland
         rsync
         spotify
@@ -72,17 +66,10 @@
         vlc
         waybar
         wf-recorder
-        wget
         wl-clipboard
         wlogout
         yazi
         zellij
         zoxide
-    ];
-
-    services.flatpak.packages = [
-        "app.zen_browser.zen"
-        "com.github.tchx84.Flatseal"
-        # "com.spotify.Client"
     ];
 }
