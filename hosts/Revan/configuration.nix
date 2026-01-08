@@ -6,7 +6,8 @@
             ./hardware-configuration.nix
             #../../modules/nix/audio.nix
             ../../modules/nix/boot.nix
-            ../../modules/nix/code_bundle.nix
+            # ../../modules/nix/code_bundle.nix
+            ../../modules/development
             ../../modules/nix/de.nix
             ../../modules/nix/fonts.nix
             ../../modules/nix/garbage.nix
