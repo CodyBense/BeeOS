@@ -69,6 +69,7 @@
         wl-clipboard
         wlogout
         yazi
+        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         zellij
         zoxide
     ];
