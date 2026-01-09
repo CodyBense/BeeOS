@@ -33,8 +33,6 @@
     { self
     , nixpkgs
     , home-manager
-    , nix-flatpak
-    , nvf
     , ...
     } @ inputs:
     let
@@ -56,8 +54,6 @@
             ./noctalia.nix
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
-            nix-flatpak.nixosModules.nix-flatpak
-            nvf.nixosModules.default
             home-manager.nixosModules.home-manager
             {
               home-manager.extraSpecialArgs = {
