@@ -8,14 +8,15 @@
             ../../modules/nix/boot.nix
             # ../../modules/nix/code_bundle.nix
             ../../modules/development
-            ../../modules/nix/de.nix
+            ../../modules/desktop
+            # ../../modules/nix/de.nix
             ../../modules/nix/fonts.nix
             ../../modules/nix/garbage.nix
             ../../modules/nix/hardware.nix
             ../../modules/nix/kanata.nix
             ../../modules/nix/networking.nix
             ../../modules/nix/packages.nix
-            ../../modules/nix/samba.nix
+            # ../../modules/nix/samba.nix
             ../../modules/nix/services.nix
             # ../../modules/nix/stylix.nix
             ../../modules/nix/system.nix
