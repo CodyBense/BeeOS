@@ -23,6 +23,10 @@
       url = "github:youwen5/zen-browser-flake";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    noctalia = {
+      url = "github:noctalia-dev/noctalia-shell";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -49,6 +53,7 @@
           };
           modules = [
             ./hosts/Revan/configuration.nix
+            ./noctalia.nix
             inputs.stylix.nixosModules.stylix
             inputs.sops-nix.nixosModules.sops
             nix-flatpak.nixosModules.nix-flatpak
