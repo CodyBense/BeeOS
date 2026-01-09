@@ -9,5 +9,6 @@
     ./networking.nix
     ./boot.nix
     ./bluetooth.nix
+    ./keyboard.nix
   ];
 }
