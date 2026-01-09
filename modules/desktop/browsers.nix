@@ -2,7 +2,6 @@
 
 {
   environment.systemPackages = with pkgs; [
-    python313
-    uv
+    inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
   ];
 }

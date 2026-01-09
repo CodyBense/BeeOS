@@ -39,8 +39,6 @@
         localsend
         matugen
         neovim
-        networkmanager
-        networkmanagerapplet
         nh
         obsidian
         # orca-slicer
@@ -61,7 +59,6 @@
         tmux
         tree
         unzip
-        uv
         vesktop
         vlc
         waybar
@@ -69,7 +66,6 @@
         wl-clipboard
         wlogout
         yazi
-        inputs.zen-browser.packages.${pkgs.stdenv.hostPlatform.system}.default
         zellij
         zoxide
     ];
